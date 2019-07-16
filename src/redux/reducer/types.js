@@ -1,2 +1,2 @@
-export const FETCH_NEWS = 'FETCH_CARS'
-export const FETCH_ARTICLE = 'FETCH_CAR'
+export const FETCH_CARS = 'FETCH_CARS'
+export const GET_CAR = 'GET_CAR'

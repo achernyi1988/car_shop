@@ -1,4 +1,4 @@
-import types from "../reducer/types"
+import {FETCH_CARS} from "../reducer/types"
 import {smartContractData} from "../../ethereum/contractInstance"
 import web3 from "../../ethereum/web3"
 
@@ -8,21 +8,28 @@ export const fetchCars = () => (dispatch) => {
 
     smartContractData.then(obj => {
 
-        console.log("fetchCar obj = ", obj);
+            console.log("fetchCar obj = ", obj);
             obj.instanceSM.methods.getNumberOfCars().call()
                 .then(async (length) => {
-                console.log("fetchCars:getNumberOfCars length", length.toNumber());
+                    console.log("fetchCars:getNumberOfCars length", length.toNumber());
 
-                let arr = [];
-            for (let i = 0; i < length; ++i) {
-                const {model, owner, price, sold,vin, year} = await obj.instanceSM.methods.getCarByIndex(i).call()
+                    let cars = [];
+                    for (let i = 0; i < length; ++i) {
+                        const {model, owner, price, sold, vin, year} = await obj.instanceSM.methods.getCarByIndex(i).call()
 
-                let _price = parseInt(web3.utils.fromWei(price._hex,"ether"));
-                arr.push({model, owner, price: _price ,
-                         sold, vin: vin.toNumber(), year: year.toNumber()});
-            }
-                console.log("fetchCars:getCarByIndex arrs", arr);
-            }).catch((err) => {
+                        let _price = parseInt(web3.utils.fromWei(price._hex, "ether"));
+                        cars.push({
+                            model, owner, price: _price,
+                            sold, vin: vin.toNumber(), year: year.toNumber()
+                        });
+                    }
+                    console.log("fetchCars:getCarByIndex cars", cars);
+
+                    dispatch({
+                        type: FETCH_CARS, payload: cars
+                    })
+
+                }).catch((err) => {
                 console.log("fetchCars:err ", err.message);
             });
         }
