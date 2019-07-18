@@ -1,4 +1,4 @@
-import {FETCH_CARS} from "../reducer/types"
+import {FETCH_CARS, USER_ACCOUNT, GET_CAR} from "../reducer/types"
 import {smartContractData} from "../../ethereum/contractInstance"
 import web3 from "../../ethereum/web3"
 
@@ -35,6 +35,43 @@ export const fetchCars = () => (dispatch) => {
         }
     )
 }
+
+
+export const fetchCar = (_vin) => (dispatch) => {
+    console.log("fetchCar", _vin);
+
+    smartContractData.then(async obj => {
+
+        console.log("fetchCar obj = ", obj);
+
+        const {model, owner, price, sold, vin, year} = await obj.instanceSM.methods.getCarByVin(parseInt(_vin)).call();
+
+        let converted_price = parseInt(web3.utils.fromWei(price._hex, "ether"));
+        const car = {model, owner, converted_price, sold, vin, year}
+        console.log("fetchCar:getCarByVin car", car);
+
+        dispatch({
+            type: GET_CAR, payload: car
+        })
+
+    }).catch((err) => {
+        console.log("fetchCar:err ", err.message);
+
+        dispatch({
+            type: GET_CAR, payload: {} //send empty
+        })
+    });
+}
+
+
+export const fetchUser = (() => (dispatch) => {
+    smartContractData.then(obj => {
+        console.log("fetchUser user", obj.accounts[0]);
+        dispatch({type: USER_ACCOUNT, payload: obj.accounts.length > 0 ? obj.accounts[0] : 0});
+
+    })
+})
+
 
 // export const getIPFSHash = () => (dispatch) => {
 //     console.log("getIPFSHash");

@@ -1,12 +1,17 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {fetchCars} from "../redux/action";
+import {fetchCars, fetchUser} from "../redux/action";
 
-class CarList extends React.Component {
+class List extends React.Component {
 
 
     componentDidMount(){
+        this.props.fetchUser();
         this.props.fetchCars();
+
+
+        // const d = new Date();
+        // console.log("timestamp", d.toLocaleString());
     }
 
     renderList = () =>{
@@ -30,7 +35,6 @@ class CarList extends React.Component {
     }
 
     render() {
-        console.log("render", this.props.cars)
         return (
             <div className="ui container">
                 <div className="row">
@@ -46,8 +50,9 @@ class CarList extends React.Component {
 
 const mapStateToProps = (state) => {
     console.log('mapStateToProps', state);
-    return {cars : state.cars};
+    return {cars : state.cars,
+            user_id: state.userid};
 };
 
 
-export default connect(mapStateToProps, {fetchCars})(CarList)
+export default connect(mapStateToProps, {fetchCars, fetchUser})(List)
