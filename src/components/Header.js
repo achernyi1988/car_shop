@@ -1,29 +1,48 @@
 import React from "react"
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import SearchBar from './SearchBar';
-import {fetchCar} from "../redux/action";
+
 import _ from "lodash"
-class  Header extends React.Component{
+import history from "../history"
+
+class Header extends React.Component {
 
     isSearched = false;
-    findCar=(value)=>{
+    onSubmite = () => {
+        console.log("Header:onSubmite");
         this.isSearched = true;
-        this.props.fetchCar(value.search);
     }
 
+    onHome = () => {
+        history.push("/")
+    }
 
-    render(){
+    onCreateCar = () => {
+        history.push("/create")
+    }
+
+    render() {
         const empty = _.isEmpty(this.props.car);
-        const result = (empty === true ? "Not found a car" :"Found a car" );
-        return(
-            <div className="ui menu">
-                <div className="ui category search item">
-                    <div className="ui transparent icon input">
-                     <SearchBar
-                         onSubmit={value => this.findCar(value)}
-                     />
+        const result = (empty === true) ? "car not found" : "Car found";
+        return (
+            <div className={"ui container"}>
+                <div className="ui blue inverted  menu">
+                    <div className="ui category search item">
+                        <div className="ui transparent icon input">
+                            <SearchBar onSubmiteForm={this.onSubmite}/>
+                        </div>
+                        {this.isSearched ? result : null}
                     </div>
-                    { this.isSearched ? result : null}
+                    <div className="menu">
+                        <button className="ui red button" onClick={this.onCreateCar}>
+                            Add a car
+                        </button>
+                    </div>
+                    <div className="right menu">
+                        <button className="ui brown button" onClick={this.onHome}>
+                            Main page
+                        </button>
+                    </div>
                 </div>
 
 
@@ -35,8 +54,8 @@ class  Header extends React.Component{
 }
 
 const mapStateToProps = (state) => {
-    return {car : state.car};
+    return {car: state.car};
 };
 
 
-export default connect( mapStateToProps,{fetchCar})(Header);
+export default connect(mapStateToProps)(Header);

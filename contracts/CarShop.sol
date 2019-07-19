@@ -11,7 +11,7 @@ contract CarShop is Arbitrator{
     //---------------------events--------------------------//
     event Delete(uint vin, bool success);
     event Edit(uint vin, bool success);
-    event Add (address owner,uint vin, string model, bool success);
+    event Add (address owner,uint vin, bytes32 model, bool success);
 
     event ConfirmSelling(uint vin, uint price,  bool success);
 
@@ -43,21 +43,21 @@ contract CarShop is Arbitrator{
         return carsArr.length;
     }
 
-    function createCar(address owner, uint vin, string model, uint year, uint price) private{
+    function createCar(address owner, uint vin, bytes32 model, uint year, uint price, string image) private{
 
-        Car car = new Car( owner,vin, model, year, price, false );
+        Car car = new Car( owner,vin, model, year, price, false, image );
         carsArr.push(car);
 
         //create a copy in order to track a full car history.Expensive
-        carLogger[vin].push(new Car( owner,vin, model, year, price, false ));
+        //carLogger[vin].push(new Car( owner,vin, model, year, price, false, image ));
 
         carIndex [vin] = carsArr.length;
         carAccessibility[owner][vin] = true;
     }
 
     constructor( )   public {
-        createCar(msg.sender, 0, "Honda", 2008, 1 * WEI);
-        //createCar(msg.sender, 1, "BMW",   2010, 2 * WEI);
+        createCar(msg.sender, 0, "Honda", 2008, 1 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
+        //createCar(msg.sender, 1, "BMW",   2010, 2 * WEI,"");
         //createCar(msg.sender, 2, "Merc",  2012, 3 * WEI);
     }
 
@@ -79,21 +79,21 @@ contract CarShop is Arbitrator{
         emit Delete(vin, true);
     }
 
-    function editCar(uint vin, string model, uint year, uint price) external isOwnerVinAvailability(msg.sender, vin)  {
+    function editCar(uint vin, bytes32 model, uint year, uint price, string  image) external isOwnerVinAvailability(msg.sender, vin)  {
 
         Car car = carsArr[ getCarIndex(vin)];
 
-        car.edit( model, year, price * WEI);
+        car.edit( model, year, price * WEI, image);
 
         //create a copy in order to track a full car history.Expensive
-        carLogger[vin].push(new Car( msg.sender,vin, model, year, price * WEI, false ));
+       // carLogger[vin].push(new Car( msg.sender,vin, model, year, price * WEI, false, image ));
 
         emit Edit(vin, true);
     }
 
-    function addCar(uint vin, string model, uint year, uint price) external {
+    function addCar(uint vin, bytes32 model, uint year, uint price, string image) external {
 
-        createCar(msg.sender, vin, model, year, price * WEI);
+        createCar(msg.sender, vin, model, year, price * WEI, image);
 
         emit Add (msg.sender,vin, model,  true);
     }
@@ -132,7 +132,7 @@ contract CarShop is Arbitrator{
         rewardAllowed += companyReward;
 
         //create a copy in order to track a full car history.Expensive
-        carLogger[vin].push(new Car( msg.sender,vin, car.model(), car.year(), car.price(), true ));
+        carLogger[vin].push(new Car( msg.sender,vin, car.model(), car.year(), car.price(), true, car.image_hash() ));
 
         emit ConfirmSelling(vin, car.price(), true);
     }
@@ -145,20 +145,26 @@ contract CarShop is Arbitrator{
     }
 
     function getCarByVin( uint _vin) external view isVINAvailability(_vin)
-    returns (  address  owner, uint vin, uint year, uint price, string model,bool sold, Car.State state, uint timestamp ){
+    returns (  address  owner, uint vin, uint year, uint price, bytes32 model,bool sold,
+        string image, Car.State state, uint timestamp ){
 
         Car car = carsArr[ getCarIndex(_vin)];
 
-        return (car.owner(), car.vin(),car.year(),car.price(),car.model(), car.sold(), car.state(), car.timestamp());
+        return (car.owner(), car.vin(),car.year(),car.price(),
+        car.model(), car.sold(), car.image_hash(),
+        car.state(), car.timestamp());
     }
 
     function getCarByIndex(uint index) external view
-    returns ( address  owner, uint vin, uint year, uint price, string model,bool sold, Car.State state, uint timestamp ){
+    returns ( address  owner, uint vin, uint year, uint price, bytes32 model,bool sold,
+        string image, Car.State state, uint timestamp ){
         require(index < carsArr.length, "index is out of range");
 
         Car car = carsArr[index];
 
-        return (car.owner(), car.vin(),car.year(),car.price(),car.model(), car.sold(), car.state(), car.timestamp());
+        return (car.owner(), car.vin(),car.year(),car.price(),
+        car.model(), car.sold(), car.image_hash(),
+        car.state(), car.timestamp());
     }
 
     function getHistoryLogCarLength(uint _vin) external view isVINAvailability(_vin) returns( uint length){
@@ -166,7 +172,8 @@ contract CarShop is Arbitrator{
     }
 
     function getHistoryLogCar(uint _vin, uint _idx) external view isCarLoggerVINAvailability(_vin)
-    returns ( address  owner, uint vin, uint year, uint price, string model,bool sold, Car.State state, uint timestamp ){
+    returns ( address  owner, uint vin, uint year, uint price, bytes32 model,bool sold,
+        string image, Car.State state, uint timestamp ){
 
         //use storage to save gas
         Car  [] storage carArray  = carLogger[_vin];
@@ -175,13 +182,15 @@ contract CarShop is Arbitrator{
 
         Car car = carArray[_idx];
 
-        return (car.owner(), car.vin(),car.year(),car.price(),car.model(), car.sold(), car.state(), car.timestamp());
+        return (car.owner(), car.vin(),car.year(),car.price(),
+        car.model(), car.sold(), car.image_hash(),
+        car.state(), car.timestamp());
     }
 
 
     function getCarIndex(uint vin) private view returns(uint){
         require(0 < carIndex[vin] && carIndex[vin] - 1 < carsArr.length , "not valid car's vin ");
-        return carIndex[vin] - 1; // on purpuse to have a correct index
+        return carIndex[vin] - 1; // on purpose to have a correct index
     }
 
 

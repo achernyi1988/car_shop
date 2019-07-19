@@ -4,6 +4,7 @@ import history from '../history'
 import Header from "./Header"
 import List from './List'
 import Show from './Show'
+import Create from './Create'
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
             <Router history={history}>
                 <Switch>
                     <Route path='/' exact component={List}/>
-                    {/*<Route path='/news/create' exact component={NewsCreate}/>*/}
+                    <Route path='/create' exact component={(props) => <Create {...props} />}/>
                     <Route path='/show/:id' exact component={Show}/>
                     {/*<Route path='/news/:id/edit' exact component={NewsEdit}/>*/}
                     <Redirect to="/"/>

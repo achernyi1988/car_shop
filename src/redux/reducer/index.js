@@ -3,8 +3,6 @@ import {FETCH_CARS, GET_CAR, USER_ACCOUNT} from "./types"
 import {reducer as formReducer} from 'redux-form'
 
 const carsListReducer = (state = [], action) =>{
-
-    console.log("carsListReducer action", action);
     if(FETCH_CARS === action.type){
         return action.payload;
     }

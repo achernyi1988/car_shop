@@ -1,20 +1,55 @@
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
+import {showCar} from "../redux/action";
+import {connect} from 'react-redux';
+
+class SearchBar extends React.Component{
+
+    // renderField = (formProps)=>{
+    //
+    //     console.log("renderField", formProps);
+    //
+    //     const className = `field ${(formProps.meta.touched && formProps.meta.error) ? "error" : "" }`;
+    //     return (
+    //         <div className={className}>
+    //             <input
+    //                 {...formProps.input}  type={formProps.type}
+    //             />
+    //
+    //         </div>
+    //     )
+    // }
+
+    onSubmit = ({search})=>{
+
+        console.log("onSubmit",search);
+
+        this.props.showCar(search);
+        this.props.onSubmiteForm();
+
+    }
+
+    render(){
+        const { handleSubmit } = this.props;
+        return(
+            <form onSubmit={handleSubmit(this.onSubmit)}>
+                <div>
+                    <Field
+                        component="input"
+                        name="search"
+                        type="text"
+                        placeholder="search car by VIN ..."
+                    />
+
+                </div>
+
+                <button type="submit">Search</button>
+            </form>
+        )
+    }
+}
 
 
-
-const SearchBar = ({ handleChange, handleSubmit, value }) => (
-    <form onSubmit={handleSubmit}>
-        <div>
-            <Field
-                component="input"
-                name="search"
-                onChange={handleChange}
-                type="text"
-                placeholder="search car by VIN ..."
-                value={value}
-            />
-        </div>
-    </form>
-)
-export default reduxForm({ form: 'SearchBar' })(SearchBar)
+export default reduxForm({ form: 'SearchBar' }) (connect(null, {
+    showCar
+})(SearchBar));

@@ -1,7 +1,7 @@
 import {FETCH_CARS, USER_ACCOUNT, GET_CAR} from "../reducer/types"
 import {smartContractData} from "../../ethereum/contractInstance"
 import web3 from "../../ethereum/web3"
-
+import history from '../../history'
 
 export const fetchCars = () => (dispatch) => {
     console.log("fetchCars");
@@ -11,16 +11,19 @@ export const fetchCars = () => (dispatch) => {
             console.log("fetchCar obj = ", obj);
             obj.instanceSM.methods.getNumberOfCars().call()
                 .then(async (length) => {
-                    console.log("fetchCars:getNumberOfCars length", length.toNumber());
+                    console.log("fetchCars:getNumberOfCars length", length);
 
                     let cars = [];
                     for (let i = 0; i < length; ++i) {
-                        const {model, owner, price, sold, vin, year} = await obj.instanceSM.methods.getCarByIndex(i).call()
+                        const {model, owner, price, sold, image, vin, year} = await obj.instanceSM.methods.getCarByIndex(i).call()
 
-                        let _price = parseInt(web3.utils.fromWei(price._hex, "ether"));
+
+                        console.log("fetchCars:getCarByIndex cars", model, owner, price, sold, image, vin, year);
+
                         cars.push({
-                            model, owner, price: _price,
-                            sold, vin: vin.toNumber(), year: year.toNumber()
+                            model: web3.utils.hexToString(model), owner,
+                            price: parseInt(web3.utils.fromWei(price, "ether")),
+                            sold, image, vin: vin, year: year
                         });
                     }
                     console.log("fetchCars:getCarByIndex cars", cars);
@@ -44,10 +47,14 @@ export const fetchCar = (_vin) => (dispatch) => {
 
         console.log("fetchCar obj = ", obj);
 
-        const {model, owner, price, sold, vin, year} = await obj.instanceSM.methods.getCarByVin(parseInt(_vin)).call();
+        const {model, owner, price, sold, image, vin, year} = await obj.instanceSM.methods.getCarByVin(parseInt(_vin)).call();
 
-        let converted_price = parseInt(web3.utils.fromWei(price._hex, "ether"));
-        const car = {model, owner, converted_price, sold, vin, year}
+        const car = {
+            model: web3.utils.hexToString(model), owner,
+            price: parseInt(web3.utils.fromWei(price, "ether")),
+            sold, image, vin: vin, year: year
+        }
+
         console.log("fetchCar:getCarByVin car", car);
 
         dispatch({
@@ -63,6 +70,96 @@ export const fetchCar = (_vin) => (dispatch) => {
     });
 }
 
+export const showCar = (_vin) => (dispatch) => {
+    console.log("showCar", _vin);
+
+    smartContractData.then(async obj => {
+
+        console.log("showCar obj = ", obj);
+
+        const {model, owner, price, sold, image, vin, year} = await obj.instanceSM.methods.getCarByVin(parseInt(_vin)).call();
+
+
+        const car = {
+            model: web3.utils.hexToString(model), owner,
+            price: parseInt(web3.utils.fromWei(price, "ether")),
+            sold, image, vin: vin, year: year
+        }
+        console.log("showCar:getCarByVin car", car);
+
+
+        dispatch({
+            type: GET_CAR, payload: car
+        })
+
+        history.push(`/show/${_vin}`);
+
+    }).catch((err) => {
+        console.log("showCar:err ", err.message);
+
+        dispatch({
+            type: GET_CAR, payload: {} //send empty
+        })
+    });
+}
+
+export const deleteCar = (_vin) => (dispatch) => {
+    console.log("deleteCar", _vin);
+
+    smartContractData.then(async obj => {
+
+        console.log("deleteCar obj = ", obj);
+
+        obj.instanceSM.methods.deleteCar(parseInt(_vin)).send({
+            from: obj.accounts[0],
+            gas: "6000000"
+        }).then((result)=>{
+            console.log("deleteCar:result ", result);
+            history.push(`/`);
+        }).catch((err) => {
+            console.log("deleteCar:err ", err.message);
+
+            dispatch({
+                type: GET_CAR, payload: {} //send empty
+            })
+        })
+    }).catch((err) => {
+        console.log("showCar:err ", err.message);
+
+        dispatch({
+            type: GET_CAR, payload: {} //send empty
+        })
+    });
+}
+
+
+export const createCar = (vin, model, year, price, image_hash) => (dispatch) => {
+    console.log("createCar", vin, model, year, price, image_hash);
+
+    smartContractData.then(async obj => {
+
+        console.log("createCar obj = ", obj);
+
+        obj.instanceSM.methods.addCar(vin, web3.utils.asciiToHex(model), year, price, image_hash).send({
+            from: obj.accounts[0],
+            gas: "6000000"
+        })
+            .then((result) => {
+
+
+                console.log("createCar:result ", result);
+                //jump to main page
+                history.push(`/`);
+            }).catch((err) => {
+            console.log("showCar1:err ", err.message);
+
+        });
+
+    }).catch((err) => {
+        console.log("showCar:err ", err.message);
+
+    });
+}
 
 export const fetchUser = (() => (dispatch) => {
     smartContractData.then(obj => {

@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.6",
-    "react-scripts": "3.0.1",
     "express": "^4.16.4",
     "fs-extra": "^7.0.1",
     "g": "^2.0.1",
@@ -13,6 +11,7 @@
     "keymirror": "^0.1.1",
     "lodash": "^4.17.11",
     "material-ui": "^0.20.2",
+    "react": "^16.8.6",
     "react-admin": "^2.7.3",
     "react-bar-chart": "^0.1.2",
     "react-circle": "^1.1.1",
@@ -21,6 +20,7 @@
     "react-redux": "^6.0.1",
     "react-router-dom": "^4.3.1",
     "react-router-scroll-top": "^0.1.1",
+    "react-scripts": "3.0.1",
     "redux": "^4.0.1",
     "redux-form": "^8.1.0",
     "redux-form-material-ui": "^4.3.4",
@@ -28,7 +28,7 @@
     "semantic-ui-react": "^0.86.0",
     "solc": "^0.4.24",
     "truffle-hdwallet-provider": "0.0.5",
-    "web3": "^1.0.0-beta.35"
+    "web3": "^1.0.0-beta.37"
   },
   "scripts": {
     "start": "react-scripts start",
