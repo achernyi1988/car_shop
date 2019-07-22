@@ -1,10 +1,14 @@
 import {combineReducers} from 'redux'
-import {FETCH_CARS, GET_CAR, USER_ACCOUNT} from "./types"
+import {DELETE_CAR, FETCH_CARS, GET_CAR, USER_ACCOUNT} from "./types"
 import {reducer as formReducer} from 'redux-form'
 
 const carsListReducer = (state = [], action) =>{
     if(FETCH_CARS === action.type){
         return action.payload;
+    }
+
+    if(DELETE_CAR === action.type){
+        return state.filter( elem => elem.vin !== action.payload.vin); //remove element by VIN
     }
     return state;
 }

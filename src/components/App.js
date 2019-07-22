@@ -5,6 +5,8 @@ import Header from "./Header"
 import List from './List'
 import Show from './Show'
 import Create from './Create'
+import Edit from './Edit'
+
 
 function App() {
 
@@ -17,7 +19,8 @@ function App() {
                     <Route path='/' exact component={List}/>
                     <Route path='/create' exact component={(props) => <Create {...props} />}/>
                     <Route path='/show/:id' exact component={Show}/>
-                    {/*<Route path='/news/:id/edit' exact component={NewsEdit}/>*/}
+                    <Route path='/edit/:id' exact component={Edit}/>
+
                     <Redirect to="/"/>
                 </Switch>
             </Router>

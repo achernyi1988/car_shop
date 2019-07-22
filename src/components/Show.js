@@ -13,6 +13,9 @@ class Show extends React.Component {
 
     render() {
 
+        if(this.props.match.params.id !== this.props.car.vin){
+            return null;
+        }
         console.log("render", this.props.car);
         const {car} = this.props;
 
