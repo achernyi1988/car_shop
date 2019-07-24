@@ -53,16 +53,16 @@ contract CarShop is Arbitrator{
         carsArr.push(car);
 
         //create a copy in order to track a full car history.Expensive
-        //carLogger[vin].push(new Car( owner,vin, model, year, price, false, image ));
+        carLogger[vin].push(new Car( owner,vin, model, year, price, false, image ));
 
         carIndex [vin] = carsArr.length;
         carAccessibility[owner][vin] = true;
     }
 
     constructor( )   public {
-        createCar(msg.sender, 0, "Honda", 2008, 1 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
-        //createCar(msg.sender, 1, "BMW",   2010, 2 * WEI,"");
-        //createCar(msg.sender, 2, "Merc",  2012, 3 * WEI);
+        //createCar(msg.sender, 0, "Honda", 2008, 1 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
+        //createCar(msg.sender, 1, "BMW",   2010, 2 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
+       // createCar(msg.sender, 2, "Merc",  2012, 3 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
     }
 
     function deleteCar(uint vin) public isOwnerVinAvailability(msg.sender, vin) {
@@ -90,7 +90,7 @@ contract CarShop is Arbitrator{
         car.edit( model, year, price * WEI, image);
 
         //create a copy in order to track a full car history.Expensive
-       // carLogger[vin].push(new Car( msg.sender,vin, model, year, price * WEI, false, image ));
+        carLogger[vin].push(new Car( msg.sender,vin, model, year, price * WEI, false, image ));
 
         emit Edit(vin, true);
     }

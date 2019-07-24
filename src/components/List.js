@@ -12,20 +12,20 @@ class List extends React.Component {
         this.props.fetchCars();
     }
 
-    onShopAction = ()=>{
+    onShopAction = () => {
         console.log("onShopAction");
         this.props.fetchCars();
     }
 
     renderWithdraw = () => {
 
-        if(this.props.shopOwner !== this.props.userId){
+        if (this.props.shopOwner !== this.props.userId) {
             return null;
         }
 
         return (
             <div className={"ui container"} style={{marginTop: "50px"}}>
-                <button className="ui primary button" onClick={ () => this.props.withdrawAllReward()}>
+                <button className="ui primary button" onClick={() => this.props.withdrawAllReward()}>
                     Withdraw money
                 </button>
             </div>
@@ -34,14 +34,17 @@ class List extends React.Component {
 
     render() {
         return (
-            this.props.cars.map((car) => {
-                return (
-                    <div style={{marginTop: "10px"}} key={car.vin}>
-                        <Card car={car} userId = {this.props.userId} onShopAction={this.onShopAction}> </Card>
-                        {this.renderWithdraw()}
-                    </div>
-                );
-            })
+            <div>
+                {this.props.cars.map((car) => {
+                    return (
+                        <div style={{marginTop: "10px"}} key={car.vin}>
+                            <Card car={car} userId={this.props.userId} onShopAction={this.onShopAction}> </Card>
+
+                        </div>
+                    );
+                })}
+                {this.renderWithdraw()}
+            </div>
 
         )
     }
