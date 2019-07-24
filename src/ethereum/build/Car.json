@@ -254,14 +254,14 @@
     "absolutePath": "/D/MyProgrames/blockchain/ethereum/car_shop/contracts/Car.sol",
     "exportedSymbols": {
       "Car": [
-        233
+        221
       ]
     },
-    "id": 234,
+    "id": 222,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 39,
+        "id": 27,
         "literals": [
           "solidity",
           "^",
@@ -277,37 +277,37 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 233,
+        "id": 221,
         "linearizedBaseContracts": [
-          233
+          221
         ],
         "name": "Car",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Car.State",
-            "id": 44,
+            "id": 32,
             "members": [
               {
-                "id": 40,
+                "id": 28,
                 "name": "IDLE",
                 "nodeType": "EnumValue",
                 "src": "62:4:1"
               },
               {
-                "id": 41,
+                "id": 29,
                 "name": "BUY",
                 "nodeType": "EnumValue",
                 "src": "68:3:1"
               },
               {
-                "id": 42,
+                "id": 30,
                 "name": "SEND_DELIVERY",
                 "nodeType": "EnumValue",
                 "src": "73:13:1"
               },
               {
-                "id": 43,
+                "id": 31,
                 "name": "SOLD",
                 "nodeType": "EnumValue",
                 "src": "88:4:1"
@@ -319,10 +319,10 @@
           },
           {
             "constant": false,
-            "id": 46,
+            "id": 34,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "101:20:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -331,7 +331,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 45,
+              "id": 33,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "101:7:1",
@@ -345,10 +345,10 @@
           },
           {
             "constant": false,
-            "id": 48,
+            "id": 36,
             "name": "buyer",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "128:20:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -357,7 +357,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 47,
+              "id": 35,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "128:7:1",
@@ -371,10 +371,10 @@
           },
           {
             "constant": false,
-            "id": 50,
+            "id": 38,
             "name": "vin",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "155:15:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -383,7 +383,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 49,
+              "id": 37,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "155:4:1",
@@ -397,10 +397,10 @@
           },
           {
             "constant": false,
-            "id": 52,
+            "id": 40,
             "name": "year",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "210:17:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -409,7 +409,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 51,
+              "id": 39,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "210:4:1",
@@ -423,10 +423,10 @@
           },
           {
             "constant": false,
-            "id": 54,
+            "id": 42,
             "name": "price",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "234:17:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -435,7 +435,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 53,
+              "id": 41,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "234:4:1",
@@ -449,10 +449,10 @@
           },
           {
             "constant": false,
-            "id": 56,
+            "id": 44,
             "name": "model",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "258:20:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -461,7 +461,7 @@
               "typeString": "bytes32"
             },
             "typeName": {
-              "id": 55,
+              "id": 43,
               "name": "bytes32",
               "nodeType": "ElementaryTypeName",
               "src": "258:7:1",
@@ -475,10 +475,10 @@
           },
           {
             "constant": false,
-            "id": 58,
+            "id": 46,
             "name": "image_hash",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "285:24:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -487,7 +487,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 57,
+              "id": 45,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "285:6:1",
@@ -501,26 +501,26 @@
           },
           {
             "constant": false,
-            "id": 60,
+            "id": 48,
             "name": "state",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "323:18:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_enum$_State_$44",
+              "typeIdentifier": "t_enum$_State_$32",
               "typeString": "enum Car.State"
             },
             "typeName": {
               "contractScope": null,
-              "id": 59,
+              "id": 47,
               "name": "State",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 44,
+              "referencedDeclaration": 32,
               "src": "323:5:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_enum$_State_$44",
+                "typeIdentifier": "t_enum$_State_$32",
                 "typeString": "enum Car.State"
               }
             },
@@ -529,10 +529,10 @@
           },
           {
             "constant": false,
-            "id": 62,
+            "id": 50,
             "name": "sold",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "348:17:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -541,7 +541,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 61,
+              "id": 49,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "348:4:1",
@@ -555,10 +555,10 @@
           },
           {
             "constant": false,
-            "id": 64,
+            "id": 52,
             "name": "timestamp",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "372:22:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -567,7 +567,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 63,
+              "id": 51,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "372:4:1",
@@ -581,25 +581,25 @@
           },
           {
             "body": {
-              "id": 122,
+              "id": 110,
               "nodeType": "Block",
               "src": "547:266:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 83,
+                    "id": 71,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 81,
+                      "id": 69,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 46,
+                      "referencedDeclaration": 34,
                       "src": "558:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -610,11 +610,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 82,
+                      "id": 70,
                       "name": "_owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 66,
+                      "referencedDeclaration": 54,
                       "src": "566:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -627,25 +627,25 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 84,
+                  "id": 72,
                   "nodeType": "ExpressionStatement",
                   "src": "558:14:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 87,
+                    "id": 75,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 85,
+                      "id": 73,
                       "name": "buyer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 48,
+                      "referencedDeclaration": 36,
                       "src": "583:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -657,7 +657,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30783030",
-                      "id": 86,
+                      "id": 74,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -678,25 +678,25 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 88,
+                  "id": 76,
                   "nodeType": "ExpressionStatement",
                   "src": "583:12:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 91,
+                    "id": 79,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 89,
+                      "id": 77,
                       "name": "vin",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 50,
+                      "referencedDeclaration": 38,
                       "src": "606:3:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -707,11 +707,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 90,
+                      "id": 78,
                       "name": "_vin",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 68,
+                      "referencedDeclaration": 56,
                       "src": "614:4:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -724,25 +724,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 92,
+                  "id": 80,
                   "nodeType": "ExpressionStatement",
                   "src": "606:12:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 95,
+                    "id": 83,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 93,
+                      "id": 81,
                       "name": "year",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 52,
+                      "referencedDeclaration": 40,
                       "src": "629:4:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -753,11 +753,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 94,
+                      "id": 82,
                       "name": "_year",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 72,
+                      "referencedDeclaration": 60,
                       "src": "637:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -770,25 +770,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 96,
+                  "id": 84,
                   "nodeType": "ExpressionStatement",
                   "src": "629:13:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 99,
+                    "id": 87,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 97,
+                      "id": 85,
                       "name": "price",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 54,
+                      "referencedDeclaration": 42,
                       "src": "653:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -799,11 +799,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 98,
+                      "id": 86,
                       "name": "_price",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 74,
+                      "referencedDeclaration": 62,
                       "src": "661:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -816,25 +816,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 100,
+                  "id": 88,
                   "nodeType": "ExpressionStatement",
                   "src": "653:14:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 103,
+                    "id": 91,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 101,
+                      "id": 89,
                       "name": "model",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56,
+                      "referencedDeclaration": 44,
                       "src": "678:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -845,11 +845,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 102,
+                      "id": 90,
                       "name": "_model",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 70,
+                      "referencedDeclaration": 58,
                       "src": "686:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -862,25 +862,25 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 104,
+                  "id": 92,
                   "nodeType": "ExpressionStatement",
                   "src": "678:14:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 107,
+                    "id": 95,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 105,
+                      "id": 93,
                       "name": "image_hash",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 58,
+                      "referencedDeclaration": 46,
                       "src": "703:10:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -891,11 +891,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 106,
+                      "id": 94,
                       "name": "_image_hash",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 78,
+                      "referencedDeclaration": 66,
                       "src": "716:11:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -908,25 +908,25 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 108,
+                  "id": 96,
                   "nodeType": "ExpressionStatement",
                   "src": "703:24:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 111,
+                    "id": 99,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 109,
+                      "id": 97,
                       "name": "timestamp",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 64,
+                      "referencedDeclaration": 52,
                       "src": "738:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -937,11 +937,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 110,
+                      "id": 98,
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1141,
+                      "referencedDeclaration": 1137,
                       "src": "750:3:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -954,25 +954,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 112,
+                  "id": 100,
                   "nodeType": "ExpressionStatement",
                   "src": "738:15:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 115,
+                    "id": 103,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 113,
+                      "id": 101,
                       "name": "sold",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 62,
+                      "referencedDeclaration": 50,
                       "src": "764:4:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -983,11 +983,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 114,
+                      "id": 102,
                       "name": "_sold",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 76,
+                      "referencedDeclaration": 64,
                       "src": "771:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1000,28 +1000,28 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 116,
+                  "id": 104,
                   "nodeType": "ExpressionStatement",
                   "src": "764:12:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 120,
+                    "id": 108,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 117,
+                      "id": 105,
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 60,
+                      "referencedDeclaration": 48,
                       "src": "787:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
@@ -1031,18 +1031,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 118,
+                        "id": 106,
                         "name": "State",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 44,
+                        "referencedDeclaration": 32,
                         "src": "795:5:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                          "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                           "typeString": "type(enum Car.State)"
                         }
                       },
-                      "id": 119,
+                      "id": 107,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1052,24 +1052,24 @@
                       "referencedDeclaration": null,
                       "src": "795:10:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
                     "src": "787:18:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   },
-                  "id": 121,
+                  "id": 109,
                   "nodeType": "ExpressionStatement",
                   "src": "787:18:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 123,
+            "id": 111,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -1077,15 +1077,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 79,
+              "id": 67,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 66,
+                  "id": 54,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "440:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1094,7 +1094,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 65,
+                    "id": 53,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "440:7:1",
@@ -1108,10 +1108,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 68,
+                  "id": 56,
                   "name": "_vin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "456:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1120,7 +1120,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 67,
+                    "id": 55,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "456:4:1",
@@ -1134,10 +1134,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 70,
+                  "id": 58,
                   "name": "_model",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "467:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1146,7 +1146,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 69,
+                    "id": 57,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "467:7:1",
@@ -1160,10 +1160,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 72,
+                  "id": 60,
                   "name": "_year",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "483:10:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1172,7 +1172,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 71,
+                    "id": 59,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "483:4:1",
@@ -1186,10 +1186,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 74,
+                  "id": 62,
                   "name": "_price",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "495:11:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1198,7 +1198,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 73,
+                    "id": 61,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "495:4:1",
@@ -1212,10 +1212,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 76,
+                  "id": 64,
                   "name": "_sold",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "508:10:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1224,7 +1224,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 75,
+                    "id": 63,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "508:4:1",
@@ -1238,10 +1238,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 78,
+                  "id": 66,
                   "name": "_image_hash",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "520:18:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1250,7 +1250,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 77,
+                    "id": 65,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "520:6:1",
@@ -1267,12 +1267,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 80,
+              "id": 68,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "547:0:1"
             },
-            "scope": 233,
+            "scope": 221,
             "src": "427:386:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1280,25 +1280,25 @@
           },
           {
             "body": {
-              "id": 154,
+              "id": 142,
               "nodeType": "Block",
               "src": "906:143:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 136,
+                    "id": 124,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 134,
+                      "id": 122,
                       "name": "year",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 52,
+                      "referencedDeclaration": 40,
                       "src": "917:4:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1309,11 +1309,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 135,
+                      "id": 123,
                       "name": "_year",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 127,
+                      "referencedDeclaration": 115,
                       "src": "925:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1326,25 +1326,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 137,
+                  "id": 125,
                   "nodeType": "ExpressionStatement",
                   "src": "917:13:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 140,
+                    "id": 128,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 138,
+                      "id": 126,
                       "name": "price",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 54,
+                      "referencedDeclaration": 42,
                       "src": "941:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1355,11 +1355,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 139,
+                      "id": 127,
                       "name": "_price",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 129,
+                      "referencedDeclaration": 117,
                       "src": "949:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1372,25 +1372,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 141,
+                  "id": 129,
                   "nodeType": "ExpressionStatement",
                   "src": "941:14:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 144,
+                    "id": 132,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 142,
+                      "id": 130,
                       "name": "model",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56,
+                      "referencedDeclaration": 44,
                       "src": "966:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -1401,11 +1401,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 143,
+                      "id": 131,
                       "name": "_model",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 125,
+                      "referencedDeclaration": 113,
                       "src": "974:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -1418,25 +1418,25 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 145,
+                  "id": 133,
                   "nodeType": "ExpressionStatement",
                   "src": "966:14:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 148,
+                    "id": 136,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 146,
+                      "id": 134,
                       "name": "image_hash",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 58,
+                      "referencedDeclaration": 46,
                       "src": "991:10:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -1447,11 +1447,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 147,
+                      "id": 135,
                       "name": "_image_hash",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 131,
+                      "referencedDeclaration": 119,
                       "src": "1004:11:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -1464,25 +1464,25 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 149,
+                  "id": 137,
                   "nodeType": "ExpressionStatement",
                   "src": "991:24:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 152,
+                    "id": 140,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 150,
+                      "id": 138,
                       "name": "timestamp",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 64,
+                      "referencedDeclaration": 52,
                       "src": "1026:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1493,11 +1493,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 151,
+                      "id": 139,
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1141,
+                      "referencedDeclaration": 1137,
                       "src": "1038:3:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1510,14 +1510,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 153,
+                  "id": 141,
                   "nodeType": "ExpressionStatement",
                   "src": "1026:15:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 155,
+            "id": 143,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1525,15 +1525,15 @@
             "name": "edit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 132,
+              "id": 120,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 125,
+                  "id": 113,
                   "name": "_model",
                   "nodeType": "VariableDeclaration",
-                  "scope": 155,
+                  "scope": 143,
                   "src": "838:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1542,7 +1542,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 124,
+                    "id": 112,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "838:7:1",
@@ -1556,10 +1556,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 127,
+                  "id": 115,
                   "name": "_year",
                   "nodeType": "VariableDeclaration",
-                  "scope": 155,
+                  "scope": 143,
                   "src": "854:10:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1568,7 +1568,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 126,
+                    "id": 114,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "854:4:1",
@@ -1582,10 +1582,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 129,
+                  "id": 117,
                   "name": "_price",
                   "nodeType": "VariableDeclaration",
-                  "scope": 155,
+                  "scope": 143,
                   "src": "866:11:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1594,7 +1594,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 128,
+                    "id": 116,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "866:4:1",
@@ -1608,10 +1608,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 131,
+                  "id": 119,
                   "name": "_image_hash",
                   "nodeType": "VariableDeclaration",
-                  "scope": 155,
+                  "scope": 143,
                   "src": "879:18:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1620,7 +1620,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 130,
+                    "id": 118,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "879:6:1",
@@ -1637,12 +1637,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 133,
+              "id": 121,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "906:0:1"
             },
-            "scope": 233,
+            "scope": 221,
             "src": "823:226:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1650,7 +1650,7 @@
           },
           {
             "body": {
-              "id": 182,
+              "id": 170,
               "nodeType": "Block",
               "src": "1138:135:1",
               "statements": [
@@ -1664,18 +1664,18 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 169,
+                        "id": 157,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 167,
+                          "id": 155,
                           "name": "amount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 159,
+                          "referencedDeclaration": 147,
                           "src": "1159:6:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1686,11 +1686,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 168,
+                          "id": 156,
                           "name": "price",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 54,
+                          "referencedDeclaration": 42,
                           "src": "1169:5:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1706,7 +1706,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "616d6f756e74206973206e6f7420657175616c20746f207072696365",
-                        "id": 170,
+                        "id": 158,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1733,21 +1733,21 @@
                           "typeString": "literal_string \"amount is not equal to price\""
                         }
                       ],
-                      "id": 166,
+                      "id": 154,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1142,
-                        1143
+                        1138,
+                        1139
                       ],
-                      "referencedDeclaration": 1143,
+                      "referencedDeclaration": 1139,
                       "src": "1151:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 171,
+                    "id": 159,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1761,25 +1761,25 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 172,
+                  "id": 160,
                   "nodeType": "ExpressionStatement",
                   "src": "1151:57:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 175,
+                    "id": 163,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 173,
+                      "id": 161,
                       "name": "buyer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 48,
+                      "referencedDeclaration": 36,
                       "src": "1221:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1790,11 +1790,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 174,
+                      "id": 162,
                       "name": "_buyer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 157,
+                      "referencedDeclaration": 145,
                       "src": "1229:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1807,28 +1807,28 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 176,
+                  "id": 164,
                   "nodeType": "ExpressionStatement",
                   "src": "1221:14:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 180,
+                    "id": 168,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 177,
+                      "id": 165,
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 60,
+                      "referencedDeclaration": 48,
                       "src": "1248:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
@@ -1838,18 +1838,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 178,
+                        "id": 166,
                         "name": "State",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 44,
+                        "referencedDeclaration": 32,
                         "src": "1256:5:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                          "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                           "typeString": "type(enum Car.State)"
                         }
                       },
-                      "id": 179,
+                      "id": 167,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1859,24 +1859,24 @@
                       "referencedDeclaration": null,
                       "src": "1256:9:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
                     "src": "1248:17:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   },
-                  "id": 181,
+                  "id": 169,
                   "nodeType": "ExpressionStatement",
                   "src": "1248:17:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 183,
+            "id": 171,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1887,18 +1887,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 162,
+                      "id": 150,
                       "name": "State",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 44,
+                      "referencedDeclaration": 32,
                       "src": "1112:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                        "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                         "typeString": "type(enum Car.State)"
                       }
                     },
-                    "id": 163,
+                    "id": 151,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1908,22 +1908,22 @@
                     "referencedDeclaration": null,
                     "src": "1112:10:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   }
                 ],
-                "id": 164,
+                "id": 152,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 161,
+                  "id": 149,
                   "name": "isValidState",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 232,
+                  "referencedDeclaration": 220,
                   "src": "1099:12:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_enum$_State_$44_$",
+                    "typeIdentifier": "t_modifier$_t_enum$_State_$32_$",
                     "typeString": "modifier (enum Car.State)"
                   }
                 },
@@ -1934,15 +1934,15 @@
             "name": "buy",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 160,
+              "id": 148,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 157,
+                  "id": 145,
                   "name": "_buyer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 183,
+                  "scope": 171,
                   "src": "1070:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1951,7 +1951,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 156,
+                    "id": 144,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1070:7:1",
@@ -1965,10 +1965,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 159,
+                  "id": 147,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 183,
+                  "scope": 171,
                   "src": "1086:11:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1977,7 +1977,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 158,
+                    "id": 146,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1086:4:1",
@@ -1994,12 +1994,12 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 165,
+              "id": 153,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1138:0:1"
             },
-            "scope": 233,
+            "scope": 221,
             "src": "1057:216:1",
             "stateMutability": "payable",
             "superFunction": null,
@@ -2007,28 +2007,28 @@
           },
           {
             "body": {
-              "id": 195,
+              "id": 183,
               "nodeType": "Block",
               "src": "1335:46:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 193,
+                    "id": 181,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 190,
+                      "id": 178,
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 60,
+                      "referencedDeclaration": 48,
                       "src": "1346:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
@@ -2038,18 +2038,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 191,
+                        "id": 179,
                         "name": "State",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 44,
+                        "referencedDeclaration": 32,
                         "src": "1354:5:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                          "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                           "typeString": "type(enum Car.State)"
                         }
                       },
-                      "id": 192,
+                      "id": 180,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2059,24 +2059,24 @@
                       "referencedDeclaration": null,
                       "src": "1354:19:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
                     "src": "1346:27:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   },
-                  "id": 194,
+                  "id": 182,
                   "nodeType": "ExpressionStatement",
                   "src": "1346:27:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 196,
+            "id": 184,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -2087,18 +2087,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 186,
+                      "id": 174,
                       "name": "State",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 44,
+                      "referencedDeclaration": 32,
                       "src": "1318:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                        "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                         "typeString": "type(enum Car.State)"
                       }
                     },
-                    "id": 187,
+                    "id": 175,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2108,22 +2108,22 @@
                     "referencedDeclaration": null,
                     "src": "1318:9:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   }
                 ],
-                "id": 188,
+                "id": 176,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 185,
+                  "id": 173,
                   "name": "isValidState",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 232,
+                  "referencedDeclaration": 220,
                   "src": "1305:12:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_enum$_State_$44_$",
+                    "typeIdentifier": "t_modifier$_t_enum$_State_$32_$",
                     "typeString": "modifier (enum Car.State)"
                   }
                 },
@@ -2134,19 +2134,19 @@
             "name": "sendDelivery",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 184,
+              "id": 172,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1302:2:1"
             },
             "payable": false,
             "returnParameters": {
-              "id": 189,
+              "id": 177,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1335:0:1"
             },
-            "scope": 233,
+            "scope": 221,
             "src": "1281:100:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2154,28 +2154,28 @@
           },
           {
             "body": {
-              "id": 218,
+              "id": 206,
               "nodeType": "Block",
               "src": "1472:86:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 208,
+                    "id": 196,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 205,
+                      "id": 193,
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 60,
+                      "referencedDeclaration": 48,
                       "src": "1483:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
@@ -2185,18 +2185,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 206,
+                        "id": 194,
                         "name": "State",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 44,
+                        "referencedDeclaration": 32,
                         "src": "1491:5:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                          "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                           "typeString": "type(enum Car.State)"
                         }
                       },
-                      "id": 207,
+                      "id": 195,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2206,35 +2206,35 @@
                       "referencedDeclaration": null,
                       "src": "1491:10:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
                     "src": "1483:18:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   },
-                  "id": 209,
+                  "id": 197,
                   "nodeType": "ExpressionStatement",
                   "src": "1483:18:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 212,
+                    "id": 200,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 210,
+                      "id": 198,
                       "name": "sold",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 62,
+                      "referencedDeclaration": 50,
                       "src": "1512:4:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -2246,7 +2246,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 211,
+                      "id": 199,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2267,25 +2267,25 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 213,
+                  "id": 201,
                   "nodeType": "ExpressionStatement",
                   "src": "1512:11:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 216,
+                    "id": 204,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 214,
+                      "id": 202,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 46,
+                      "referencedDeclaration": 34,
                       "src": "1534:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2296,11 +2296,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 215,
+                      "id": 203,
                       "name": "newOwner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 198,
+                      "referencedDeclaration": 186,
                       "src": "1542:8:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2313,14 +2313,14 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 217,
+                  "id": 205,
                   "nodeType": "ExpressionStatement",
                   "src": "1534:16:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 219,
+            "id": 207,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -2331,18 +2331,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 201,
+                      "id": 189,
                       "name": "State",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 44,
+                      "referencedDeclaration": 32,
                       "src": "1445:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                        "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                         "typeString": "type(enum Car.State)"
                       }
                     },
-                    "id": 202,
+                    "id": 190,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2352,22 +2352,22 @@
                     "referencedDeclaration": null,
                     "src": "1445:19:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   }
                 ],
-                "id": 203,
+                "id": 191,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 200,
+                  "id": 188,
                   "name": "isValidState",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 232,
+                  "referencedDeclaration": 220,
                   "src": "1432:12:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_enum$_State_$44_$",
+                    "typeIdentifier": "t_modifier$_t_enum$_State_$32_$",
                     "typeString": "modifier (enum Car.State)"
                   }
                 },
@@ -2378,15 +2378,15 @@
             "name": "confirmDelivery",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 199,
+              "id": 187,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 198,
+                  "id": 186,
                   "name": "newOwner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 219,
+                  "scope": 207,
                   "src": "1414:16:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2395,7 +2395,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 197,
+                    "id": 185,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1414:7:1",
@@ -2412,12 +2412,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 204,
+              "id": 192,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1472:0:1"
             },
-            "scope": 233,
+            "scope": 221,
             "src": "1389:169:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2425,7 +2425,7 @@
           },
           {
             "body": {
-              "id": 231,
+              "id": 219,
               "nodeType": "Block",
               "src": "1603:74:1",
               "statements": [
@@ -2436,24 +2436,24 @@
                       {
                         "argumentTypes": null,
                         "commonType": {
-                          "typeIdentifier": "t_enum$_State_$44",
+                          "typeIdentifier": "t_enum$_State_$32",
                           "typeString": "enum Car.State"
                         },
-                        "id": 226,
+                        "id": 214,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 224,
+                          "id": 212,
                           "name": "state",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 60,
+                          "referencedDeclaration": 48,
                           "src": "1622:5:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_enum$_State_$44",
+                            "typeIdentifier": "t_enum$_State_$32",
                             "typeString": "enum Car.State"
                           }
                         },
@@ -2461,14 +2461,14 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 225,
+                          "id": 213,
                           "name": "_state",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 221,
+                          "referencedDeclaration": 209,
                           "src": "1631:6:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_enum$_State_$44",
+                            "typeIdentifier": "t_enum$_State_$32",
                             "typeString": "enum Car.State"
                           }
                         },
@@ -2481,7 +2481,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "6e6f742076616c6964207374617465",
-                        "id": 227,
+                        "id": 215,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2508,21 +2508,21 @@
                           "typeString": "literal_string \"not valid state\""
                         }
                       ],
-                      "id": 223,
+                      "id": 211,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1142,
-                        1143
+                        1138,
+                        1139
                       ],
-                      "referencedDeclaration": 1143,
+                      "referencedDeclaration": 1139,
                       "src": "1614:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 228,
+                    "id": 216,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2536,47 +2536,47 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 229,
+                  "id": 217,
                   "nodeType": "ExpressionStatement",
                   "src": "1614:43:1"
                 },
                 {
-                  "id": 230,
+                  "id": 218,
                   "nodeType": "PlaceholderStatement",
                   "src": "1668:1:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 232,
+            "id": 220,
             "name": "isValidState",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 222,
+              "id": 210,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 221,
+                  "id": 209,
                   "name": "_state",
                   "nodeType": "VariableDeclaration",
-                  "scope": 232,
+                  "scope": 220,
                   "src": "1590:12:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_State_$44",
+                    "typeIdentifier": "t_enum$_State_$32",
                     "typeString": "enum Car.State"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 220,
+                    "id": 208,
                     "name": "State",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 44,
+                    "referencedDeclaration": 32,
                     "src": "1590:5:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   },
@@ -2590,7 +2590,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 234,
+        "scope": 222,
         "src": "28:1652:1"
       }
     ],
@@ -2600,14 +2600,14 @@
     "absolutePath": "/D/MyProgrames/blockchain/ethereum/car_shop/contracts/Car.sol",
     "exportedSymbols": {
       "Car": [
-        233
+        221
       ]
     },
-    "id": 234,
+    "id": 222,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 39,
+        "id": 27,
         "literals": [
           "solidity",
           "^",
@@ -2623,37 +2623,37 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 233,
+        "id": 221,
         "linearizedBaseContracts": [
-          233
+          221
         ],
         "name": "Car",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Car.State",
-            "id": 44,
+            "id": 32,
             "members": [
               {
-                "id": 40,
+                "id": 28,
                 "name": "IDLE",
                 "nodeType": "EnumValue",
                 "src": "62:4:1"
               },
               {
-                "id": 41,
+                "id": 29,
                 "name": "BUY",
                 "nodeType": "EnumValue",
                 "src": "68:3:1"
               },
               {
-                "id": 42,
+                "id": 30,
                 "name": "SEND_DELIVERY",
                 "nodeType": "EnumValue",
                 "src": "73:13:1"
               },
               {
-                "id": 43,
+                "id": 31,
                 "name": "SOLD",
                 "nodeType": "EnumValue",
                 "src": "88:4:1"
@@ -2665,10 +2665,10 @@
           },
           {
             "constant": false,
-            "id": 46,
+            "id": 34,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "101:20:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2677,7 +2677,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 45,
+              "id": 33,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "101:7:1",
@@ -2691,10 +2691,10 @@
           },
           {
             "constant": false,
-            "id": 48,
+            "id": 36,
             "name": "buyer",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "128:20:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2703,7 +2703,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 47,
+              "id": 35,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "128:7:1",
@@ -2717,10 +2717,10 @@
           },
           {
             "constant": false,
-            "id": 50,
+            "id": 38,
             "name": "vin",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "155:15:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2729,7 +2729,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 49,
+              "id": 37,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "155:4:1",
@@ -2743,10 +2743,10 @@
           },
           {
             "constant": false,
-            "id": 52,
+            "id": 40,
             "name": "year",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "210:17:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2755,7 +2755,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 51,
+              "id": 39,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "210:4:1",
@@ -2769,10 +2769,10 @@
           },
           {
             "constant": false,
-            "id": 54,
+            "id": 42,
             "name": "price",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "234:17:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2781,7 +2781,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 53,
+              "id": 41,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "234:4:1",
@@ -2795,10 +2795,10 @@
           },
           {
             "constant": false,
-            "id": 56,
+            "id": 44,
             "name": "model",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "258:20:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2807,7 +2807,7 @@
               "typeString": "bytes32"
             },
             "typeName": {
-              "id": 55,
+              "id": 43,
               "name": "bytes32",
               "nodeType": "ElementaryTypeName",
               "src": "258:7:1",
@@ -2821,10 +2821,10 @@
           },
           {
             "constant": false,
-            "id": 58,
+            "id": 46,
             "name": "image_hash",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "285:24:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2833,7 +2833,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 57,
+              "id": 45,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "285:6:1",
@@ -2847,26 +2847,26 @@
           },
           {
             "constant": false,
-            "id": 60,
+            "id": 48,
             "name": "state",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "323:18:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_enum$_State_$44",
+              "typeIdentifier": "t_enum$_State_$32",
               "typeString": "enum Car.State"
             },
             "typeName": {
               "contractScope": null,
-              "id": 59,
+              "id": 47,
               "name": "State",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 44,
+              "referencedDeclaration": 32,
               "src": "323:5:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_enum$_State_$44",
+                "typeIdentifier": "t_enum$_State_$32",
                 "typeString": "enum Car.State"
               }
             },
@@ -2875,10 +2875,10 @@
           },
           {
             "constant": false,
-            "id": 62,
+            "id": 50,
             "name": "sold",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "348:17:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2887,7 +2887,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 61,
+              "id": 49,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "348:4:1",
@@ -2901,10 +2901,10 @@
           },
           {
             "constant": false,
-            "id": 64,
+            "id": 52,
             "name": "timestamp",
             "nodeType": "VariableDeclaration",
-            "scope": 233,
+            "scope": 221,
             "src": "372:22:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2913,7 +2913,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 63,
+              "id": 51,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "372:4:1",
@@ -2927,25 +2927,25 @@
           },
           {
             "body": {
-              "id": 122,
+              "id": 110,
               "nodeType": "Block",
               "src": "547:266:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 83,
+                    "id": 71,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 81,
+                      "id": 69,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 46,
+                      "referencedDeclaration": 34,
                       "src": "558:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2956,11 +2956,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 82,
+                      "id": 70,
                       "name": "_owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 66,
+                      "referencedDeclaration": 54,
                       "src": "566:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2973,25 +2973,25 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 84,
+                  "id": 72,
                   "nodeType": "ExpressionStatement",
                   "src": "558:14:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 87,
+                    "id": 75,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 85,
+                      "id": 73,
                       "name": "buyer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 48,
+                      "referencedDeclaration": 36,
                       "src": "583:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -3003,7 +3003,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30783030",
-                      "id": 86,
+                      "id": 74,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -3024,25 +3024,25 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 88,
+                  "id": 76,
                   "nodeType": "ExpressionStatement",
                   "src": "583:12:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 91,
+                    "id": 79,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 89,
+                      "id": 77,
                       "name": "vin",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 50,
+                      "referencedDeclaration": 38,
                       "src": "606:3:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3053,11 +3053,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 90,
+                      "id": 78,
                       "name": "_vin",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 68,
+                      "referencedDeclaration": 56,
                       "src": "614:4:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3070,25 +3070,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 92,
+                  "id": 80,
                   "nodeType": "ExpressionStatement",
                   "src": "606:12:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 95,
+                    "id": 83,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 93,
+                      "id": 81,
                       "name": "year",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 52,
+                      "referencedDeclaration": 40,
                       "src": "629:4:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3099,11 +3099,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 94,
+                      "id": 82,
                       "name": "_year",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 72,
+                      "referencedDeclaration": 60,
                       "src": "637:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3116,25 +3116,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 96,
+                  "id": 84,
                   "nodeType": "ExpressionStatement",
                   "src": "629:13:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 99,
+                    "id": 87,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 97,
+                      "id": 85,
                       "name": "price",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 54,
+                      "referencedDeclaration": 42,
                       "src": "653:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3145,11 +3145,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 98,
+                      "id": 86,
                       "name": "_price",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 74,
+                      "referencedDeclaration": 62,
                       "src": "661:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3162,25 +3162,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 100,
+                  "id": 88,
                   "nodeType": "ExpressionStatement",
                   "src": "653:14:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 103,
+                    "id": 91,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 101,
+                      "id": 89,
                       "name": "model",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56,
+                      "referencedDeclaration": 44,
                       "src": "678:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -3191,11 +3191,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 102,
+                      "id": 90,
                       "name": "_model",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 70,
+                      "referencedDeclaration": 58,
                       "src": "686:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -3208,25 +3208,25 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 104,
+                  "id": 92,
                   "nodeType": "ExpressionStatement",
                   "src": "678:14:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 107,
+                    "id": 95,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 105,
+                      "id": 93,
                       "name": "image_hash",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 58,
+                      "referencedDeclaration": 46,
                       "src": "703:10:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -3237,11 +3237,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 106,
+                      "id": 94,
                       "name": "_image_hash",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 78,
+                      "referencedDeclaration": 66,
                       "src": "716:11:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -3254,25 +3254,25 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 108,
+                  "id": 96,
                   "nodeType": "ExpressionStatement",
                   "src": "703:24:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 111,
+                    "id": 99,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 109,
+                      "id": 97,
                       "name": "timestamp",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 64,
+                      "referencedDeclaration": 52,
                       "src": "738:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3283,11 +3283,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 110,
+                      "id": 98,
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1141,
+                      "referencedDeclaration": 1137,
                       "src": "750:3:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3300,25 +3300,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 112,
+                  "id": 100,
                   "nodeType": "ExpressionStatement",
                   "src": "738:15:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 115,
+                    "id": 103,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 113,
+                      "id": 101,
                       "name": "sold",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 62,
+                      "referencedDeclaration": 50,
                       "src": "764:4:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -3329,11 +3329,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 114,
+                      "id": 102,
                       "name": "_sold",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 76,
+                      "referencedDeclaration": 64,
                       "src": "771:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -3346,28 +3346,28 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 116,
+                  "id": 104,
                   "nodeType": "ExpressionStatement",
                   "src": "764:12:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 120,
+                    "id": 108,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 117,
+                      "id": 105,
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 60,
+                      "referencedDeclaration": 48,
                       "src": "787:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
@@ -3377,18 +3377,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 118,
+                        "id": 106,
                         "name": "State",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 44,
+                        "referencedDeclaration": 32,
                         "src": "795:5:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                          "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                           "typeString": "type(enum Car.State)"
                         }
                       },
-                      "id": 119,
+                      "id": 107,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -3398,24 +3398,24 @@
                       "referencedDeclaration": null,
                       "src": "795:10:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
                     "src": "787:18:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   },
-                  "id": 121,
+                  "id": 109,
                   "nodeType": "ExpressionStatement",
                   "src": "787:18:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 123,
+            "id": 111,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -3423,15 +3423,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 79,
+              "id": 67,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 66,
+                  "id": 54,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "440:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3440,7 +3440,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 65,
+                    "id": 53,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "440:7:1",
@@ -3454,10 +3454,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 68,
+                  "id": 56,
                   "name": "_vin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "456:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3466,7 +3466,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 67,
+                    "id": 55,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "456:4:1",
@@ -3480,10 +3480,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 70,
+                  "id": 58,
                   "name": "_model",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "467:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3492,7 +3492,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 69,
+                    "id": 57,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "467:7:1",
@@ -3506,10 +3506,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 72,
+                  "id": 60,
                   "name": "_year",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "483:10:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3518,7 +3518,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 71,
+                    "id": 59,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "483:4:1",
@@ -3532,10 +3532,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 74,
+                  "id": 62,
                   "name": "_price",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "495:11:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3544,7 +3544,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 73,
+                    "id": 61,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "495:4:1",
@@ -3558,10 +3558,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 76,
+                  "id": 64,
                   "name": "_sold",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "508:10:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3570,7 +3570,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 75,
+                    "id": 63,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "508:4:1",
@@ -3584,10 +3584,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 78,
+                  "id": 66,
                   "name": "_image_hash",
                   "nodeType": "VariableDeclaration",
-                  "scope": 123,
+                  "scope": 111,
                   "src": "520:18:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3596,7 +3596,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 77,
+                    "id": 65,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "520:6:1",
@@ -3613,12 +3613,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 80,
+              "id": 68,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "547:0:1"
             },
-            "scope": 233,
+            "scope": 221,
             "src": "427:386:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3626,25 +3626,25 @@
           },
           {
             "body": {
-              "id": 154,
+              "id": 142,
               "nodeType": "Block",
               "src": "906:143:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 136,
+                    "id": 124,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 134,
+                      "id": 122,
                       "name": "year",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 52,
+                      "referencedDeclaration": 40,
                       "src": "917:4:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3655,11 +3655,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 135,
+                      "id": 123,
                       "name": "_year",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 127,
+                      "referencedDeclaration": 115,
                       "src": "925:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3672,25 +3672,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 137,
+                  "id": 125,
                   "nodeType": "ExpressionStatement",
                   "src": "917:13:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 140,
+                    "id": 128,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 138,
+                      "id": 126,
                       "name": "price",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 54,
+                      "referencedDeclaration": 42,
                       "src": "941:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3701,11 +3701,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 139,
+                      "id": 127,
                       "name": "_price",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 129,
+                      "referencedDeclaration": 117,
                       "src": "949:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3718,25 +3718,25 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 141,
+                  "id": 129,
                   "nodeType": "ExpressionStatement",
                   "src": "941:14:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 144,
+                    "id": 132,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 142,
+                      "id": 130,
                       "name": "model",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56,
+                      "referencedDeclaration": 44,
                       "src": "966:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -3747,11 +3747,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 143,
+                      "id": 131,
                       "name": "_model",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 125,
+                      "referencedDeclaration": 113,
                       "src": "974:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -3764,25 +3764,25 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 145,
+                  "id": 133,
                   "nodeType": "ExpressionStatement",
                   "src": "966:14:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 148,
+                    "id": 136,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 146,
+                      "id": 134,
                       "name": "image_hash",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 58,
+                      "referencedDeclaration": 46,
                       "src": "991:10:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
@@ -3793,11 +3793,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 147,
+                      "id": 135,
                       "name": "_image_hash",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 131,
+                      "referencedDeclaration": 119,
                       "src": "1004:11:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -3810,25 +3810,25 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 149,
+                  "id": 137,
                   "nodeType": "ExpressionStatement",
                   "src": "991:24:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 152,
+                    "id": 140,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 150,
+                      "id": 138,
                       "name": "timestamp",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 64,
+                      "referencedDeclaration": 52,
                       "src": "1026:9:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3839,11 +3839,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 151,
+                      "id": 139,
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1141,
+                      "referencedDeclaration": 1137,
                       "src": "1038:3:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3856,14 +3856,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 153,
+                  "id": 141,
                   "nodeType": "ExpressionStatement",
                   "src": "1026:15:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 155,
+            "id": 143,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -3871,15 +3871,15 @@
             "name": "edit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 132,
+              "id": 120,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 125,
+                  "id": 113,
                   "name": "_model",
                   "nodeType": "VariableDeclaration",
-                  "scope": 155,
+                  "scope": 143,
                   "src": "838:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3888,7 +3888,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 124,
+                    "id": 112,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "838:7:1",
@@ -3902,10 +3902,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 127,
+                  "id": 115,
                   "name": "_year",
                   "nodeType": "VariableDeclaration",
-                  "scope": 155,
+                  "scope": 143,
                   "src": "854:10:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3914,7 +3914,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 126,
+                    "id": 114,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "854:4:1",
@@ -3928,10 +3928,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 129,
+                  "id": 117,
                   "name": "_price",
                   "nodeType": "VariableDeclaration",
-                  "scope": 155,
+                  "scope": 143,
                   "src": "866:11:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3940,7 +3940,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 128,
+                    "id": 116,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "866:4:1",
@@ -3954,10 +3954,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 131,
+                  "id": 119,
                   "name": "_image_hash",
                   "nodeType": "VariableDeclaration",
-                  "scope": 155,
+                  "scope": 143,
                   "src": "879:18:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3966,7 +3966,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 130,
+                    "id": 118,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "879:6:1",
@@ -3983,12 +3983,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 133,
+              "id": 121,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "906:0:1"
             },
-            "scope": 233,
+            "scope": 221,
             "src": "823:226:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3996,7 +3996,7 @@
           },
           {
             "body": {
-              "id": 182,
+              "id": 170,
               "nodeType": "Block",
               "src": "1138:135:1",
               "statements": [
@@ -4010,18 +4010,18 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 169,
+                        "id": 157,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 167,
+                          "id": 155,
                           "name": "amount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 159,
+                          "referencedDeclaration": 147,
                           "src": "1159:6:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -4032,11 +4032,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 168,
+                          "id": 156,
                           "name": "price",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 54,
+                          "referencedDeclaration": 42,
                           "src": "1169:5:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -4052,7 +4052,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "616d6f756e74206973206e6f7420657175616c20746f207072696365",
-                        "id": 170,
+                        "id": 158,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -4079,21 +4079,21 @@
                           "typeString": "literal_string \"amount is not equal to price\""
                         }
                       ],
-                      "id": 166,
+                      "id": 154,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1142,
-                        1143
+                        1138,
+                        1139
                       ],
-                      "referencedDeclaration": 1143,
+                      "referencedDeclaration": 1139,
                       "src": "1151:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 171,
+                    "id": 159,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4107,25 +4107,25 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 172,
+                  "id": 160,
                   "nodeType": "ExpressionStatement",
                   "src": "1151:57:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 175,
+                    "id": 163,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 173,
+                      "id": 161,
                       "name": "buyer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 48,
+                      "referencedDeclaration": 36,
                       "src": "1221:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -4136,11 +4136,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 174,
+                      "id": 162,
                       "name": "_buyer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 157,
+                      "referencedDeclaration": 145,
                       "src": "1229:6:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -4153,28 +4153,28 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 176,
+                  "id": 164,
                   "nodeType": "ExpressionStatement",
                   "src": "1221:14:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 180,
+                    "id": 168,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 177,
+                      "id": 165,
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 60,
+                      "referencedDeclaration": 48,
                       "src": "1248:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
@@ -4184,18 +4184,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 178,
+                        "id": 166,
                         "name": "State",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 44,
+                        "referencedDeclaration": 32,
                         "src": "1256:5:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                          "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                           "typeString": "type(enum Car.State)"
                         }
                       },
-                      "id": 179,
+                      "id": 167,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4205,24 +4205,24 @@
                       "referencedDeclaration": null,
                       "src": "1256:9:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
                     "src": "1248:17:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   },
-                  "id": 181,
+                  "id": 169,
                   "nodeType": "ExpressionStatement",
                   "src": "1248:17:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 183,
+            "id": 171,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -4233,18 +4233,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 162,
+                      "id": 150,
                       "name": "State",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 44,
+                      "referencedDeclaration": 32,
                       "src": "1112:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                        "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                         "typeString": "type(enum Car.State)"
                       }
                     },
-                    "id": 163,
+                    "id": 151,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -4254,22 +4254,22 @@
                     "referencedDeclaration": null,
                     "src": "1112:10:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   }
                 ],
-                "id": 164,
+                "id": 152,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 161,
+                  "id": 149,
                   "name": "isValidState",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 232,
+                  "referencedDeclaration": 220,
                   "src": "1099:12:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_enum$_State_$44_$",
+                    "typeIdentifier": "t_modifier$_t_enum$_State_$32_$",
                     "typeString": "modifier (enum Car.State)"
                   }
                 },
@@ -4280,15 +4280,15 @@
             "name": "buy",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 160,
+              "id": 148,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 157,
+                  "id": 145,
                   "name": "_buyer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 183,
+                  "scope": 171,
                   "src": "1070:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4297,7 +4297,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 156,
+                    "id": 144,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1070:7:1",
@@ -4311,10 +4311,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 159,
+                  "id": 147,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 183,
+                  "scope": 171,
                   "src": "1086:11:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4323,7 +4323,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 158,
+                    "id": 146,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1086:4:1",
@@ -4340,12 +4340,12 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 165,
+              "id": 153,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1138:0:1"
             },
-            "scope": 233,
+            "scope": 221,
             "src": "1057:216:1",
             "stateMutability": "payable",
             "superFunction": null,
@@ -4353,28 +4353,28 @@
           },
           {
             "body": {
-              "id": 195,
+              "id": 183,
               "nodeType": "Block",
               "src": "1335:46:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 193,
+                    "id": 181,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 190,
+                      "id": 178,
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 60,
+                      "referencedDeclaration": 48,
                       "src": "1346:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
@@ -4384,18 +4384,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 191,
+                        "id": 179,
                         "name": "State",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 44,
+                        "referencedDeclaration": 32,
                         "src": "1354:5:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                          "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                           "typeString": "type(enum Car.State)"
                         }
                       },
-                      "id": 192,
+                      "id": 180,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4405,24 +4405,24 @@
                       "referencedDeclaration": null,
                       "src": "1354:19:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
                     "src": "1346:27:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   },
-                  "id": 194,
+                  "id": 182,
                   "nodeType": "ExpressionStatement",
                   "src": "1346:27:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 196,
+            "id": 184,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -4433,18 +4433,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 186,
+                      "id": 174,
                       "name": "State",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 44,
+                      "referencedDeclaration": 32,
                       "src": "1318:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                        "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                         "typeString": "type(enum Car.State)"
                       }
                     },
-                    "id": 187,
+                    "id": 175,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -4454,22 +4454,22 @@
                     "referencedDeclaration": null,
                     "src": "1318:9:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   }
                 ],
-                "id": 188,
+                "id": 176,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 185,
+                  "id": 173,
                   "name": "isValidState",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 232,
+                  "referencedDeclaration": 220,
                   "src": "1305:12:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_enum$_State_$44_$",
+                    "typeIdentifier": "t_modifier$_t_enum$_State_$32_$",
                     "typeString": "modifier (enum Car.State)"
                   }
                 },
@@ -4480,19 +4480,19 @@
             "name": "sendDelivery",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 184,
+              "id": 172,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1302:2:1"
             },
             "payable": false,
             "returnParameters": {
-              "id": 189,
+              "id": 177,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1335:0:1"
             },
-            "scope": 233,
+            "scope": 221,
             "src": "1281:100:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4500,28 +4500,28 @@
           },
           {
             "body": {
-              "id": 218,
+              "id": 206,
               "nodeType": "Block",
               "src": "1472:86:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 208,
+                    "id": 196,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 205,
+                      "id": 193,
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 60,
+                      "referencedDeclaration": 48,
                       "src": "1483:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
@@ -4531,18 +4531,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 206,
+                        "id": 194,
                         "name": "State",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 44,
+                        "referencedDeclaration": 32,
                         "src": "1491:5:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                          "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                           "typeString": "type(enum Car.State)"
                         }
                       },
-                      "id": 207,
+                      "id": 195,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4552,35 +4552,35 @@
                       "referencedDeclaration": null,
                       "src": "1491:10:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_State_$44",
+                        "typeIdentifier": "t_enum$_State_$32",
                         "typeString": "enum Car.State"
                       }
                     },
                     "src": "1483:18:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   },
-                  "id": 209,
+                  "id": 197,
                   "nodeType": "ExpressionStatement",
                   "src": "1483:18:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 212,
+                    "id": 200,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 210,
+                      "id": 198,
                       "name": "sold",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 62,
+                      "referencedDeclaration": 50,
                       "src": "1512:4:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -4592,7 +4592,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 211,
+                      "id": 199,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4613,25 +4613,25 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 213,
+                  "id": 201,
                   "nodeType": "ExpressionStatement",
                   "src": "1512:11:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 216,
+                    "id": 204,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 214,
+                      "id": 202,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 46,
+                      "referencedDeclaration": 34,
                       "src": "1534:5:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -4642,11 +4642,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 215,
+                      "id": 203,
                       "name": "newOwner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 198,
+                      "referencedDeclaration": 186,
                       "src": "1542:8:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -4659,14 +4659,14 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 217,
+                  "id": 205,
                   "nodeType": "ExpressionStatement",
                   "src": "1534:16:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 219,
+            "id": 207,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -4677,18 +4677,18 @@
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 201,
+                      "id": 189,
                       "name": "State",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 44,
+                      "referencedDeclaration": 32,
                       "src": "1445:5:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_enum$_State_$44_$",
+                        "typeIdentifier": "t_type$_t_enum$_State_$32_$",
                         "typeString": "type(enum Car.State)"
                       }
                     },
-                    "id": 202,
+                    "id": 190,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -4698,22 +4698,22 @@
                     "referencedDeclaration": null,
                     "src": "1445:19:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   }
                 ],
-                "id": 203,
+                "id": 191,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 200,
+                  "id": 188,
                   "name": "isValidState",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 232,
+                  "referencedDeclaration": 220,
                   "src": "1432:12:1",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_enum$_State_$44_$",
+                    "typeIdentifier": "t_modifier$_t_enum$_State_$32_$",
                     "typeString": "modifier (enum Car.State)"
                   }
                 },
@@ -4724,15 +4724,15 @@
             "name": "confirmDelivery",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 199,
+              "id": 187,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 198,
+                  "id": 186,
                   "name": "newOwner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 219,
+                  "scope": 207,
                   "src": "1414:16:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4741,7 +4741,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 197,
+                    "id": 185,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1414:7:1",
@@ -4758,12 +4758,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 204,
+              "id": 192,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1472:0:1"
             },
-            "scope": 233,
+            "scope": 221,
             "src": "1389:169:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4771,7 +4771,7 @@
           },
           {
             "body": {
-              "id": 231,
+              "id": 219,
               "nodeType": "Block",
               "src": "1603:74:1",
               "statements": [
@@ -4782,24 +4782,24 @@
                       {
                         "argumentTypes": null,
                         "commonType": {
-                          "typeIdentifier": "t_enum$_State_$44",
+                          "typeIdentifier": "t_enum$_State_$32",
                           "typeString": "enum Car.State"
                         },
-                        "id": 226,
+                        "id": 214,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 224,
+                          "id": 212,
                           "name": "state",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 60,
+                          "referencedDeclaration": 48,
                           "src": "1622:5:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_enum$_State_$44",
+                            "typeIdentifier": "t_enum$_State_$32",
                             "typeString": "enum Car.State"
                           }
                         },
@@ -4807,14 +4807,14 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 225,
+                          "id": 213,
                           "name": "_state",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 221,
+                          "referencedDeclaration": 209,
                           "src": "1631:6:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_enum$_State_$44",
+                            "typeIdentifier": "t_enum$_State_$32",
                             "typeString": "enum Car.State"
                           }
                         },
@@ -4827,7 +4827,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "6e6f742076616c6964207374617465",
-                        "id": 227,
+                        "id": 215,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -4854,21 +4854,21 @@
                           "typeString": "literal_string \"not valid state\""
                         }
                       ],
-                      "id": 223,
+                      "id": 211,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1142,
-                        1143
+                        1138,
+                        1139
                       ],
-                      "referencedDeclaration": 1143,
+                      "referencedDeclaration": 1139,
                       "src": "1614:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 228,
+                    "id": 216,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4882,47 +4882,47 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 229,
+                  "id": 217,
                   "nodeType": "ExpressionStatement",
                   "src": "1614:43:1"
                 },
                 {
-                  "id": 230,
+                  "id": 218,
                   "nodeType": "PlaceholderStatement",
                   "src": "1668:1:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 232,
+            "id": 220,
             "name": "isValidState",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 222,
+              "id": 210,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 221,
+                  "id": 209,
                   "name": "_state",
                   "nodeType": "VariableDeclaration",
-                  "scope": 232,
+                  "scope": 220,
                   "src": "1590:12:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_State_$44",
+                    "typeIdentifier": "t_enum$_State_$32",
                     "typeString": "enum Car.State"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 220,
+                    "id": 208,
                     "name": "State",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 44,
+                    "referencedDeclaration": 32,
                     "src": "1590:5:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_State_$44",
+                      "typeIdentifier": "t_enum$_State_$32",
                       "typeString": "enum Car.State"
                     }
                   },
@@ -4936,7 +4936,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 234,
+        "scope": 222,
         "src": "28:1652:1"
       }
     ],
@@ -4948,5 +4948,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.2",
-  "updatedAt": "2019-07-24T14:28:41.293Z"
+  "updatedAt": "2019-07-24T15:46:49.196Z"
 }

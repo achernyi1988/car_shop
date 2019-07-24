@@ -35,6 +35,10 @@ contract CarShop is Arbitrator{
 
     //---------------------functions--------------------------//
 
+    function getOwner() external view returns (address owner){
+        return arbitrator;
+    }
+
     function getContractBalance() external view returns (uint balance){
         return address(this).balance;
     }

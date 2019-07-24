@@ -45,7 +45,7 @@ const getCarState = (props) => {
         case CarState.IDLE:
             return {text: "Buy", bg: "white", button_name: "ui green  button", func: Buy};
         case CarState.BUY:
-            return {text: "Send delivery", bg: "red", button_name: "ui yellow  button", display: display_owner, func: SendDelivery};
+            return {text: "Send delivery", bg: "olive", button_name: "ui yellow  button", display: display_owner, func: SendDelivery};
         case CarState.SEND_DELIVERY:
             return {text: "Confirm delivery", bg: "yellow", button_name: "ui red  button",  display: display_buyer, func: ConfirmDelivery};
         case CarState.SOLD:
