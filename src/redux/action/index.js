@@ -1,7 +1,8 @@
-import {FETCH_CARS, USER_ACCOUNT, GET_CAR, DELETE_CAR} from "../reducer/types"
+import {FETCH_CARS, USER_ACCOUNT, GET_CAR, DELETE_CAR, BUY_CAR} from "../reducer/types"
 import {smartContractData} from "../../ethereum/contractInstance"
 import web3 from "../../ethereum/web3"
 import history from '../../history'
+import {getCarStateEnum} from "../../components/types"
 
 export const fetchCars = () => (dispatch) => {
     console.log("fetchCars");
@@ -15,15 +16,19 @@ export const fetchCars = () => (dispatch) => {
 
                     let cars = [];
                     for (let i = 0; i < length; ++i) {
-                        const {model, owner, price, sold, image, vin, year} = await obj.instanceSM.methods.getCarByIndex(i).call()
+                        const {model, owner, buyer, price, sold, image, vin, year, state, timestamp} =
+                                    await obj.instanceSM.methods.getCarByIndex(i).call()
 
+                        const date = new Date(timestamp * 1000); //convert to Date
+                        const eState = getCarStateEnum(state);
 
-                        console.log("fetchCars:getCarByIndex cars", model, owner, price, sold, image, vin, year);
+                        console.log("fetchCars:getCarByIndex cars", model, owner,buyer, price, sold,
+                            image, vin, year, getCarStateEnum(state), date);
 
                         cars.push({
-                            model: web3.utils.hexToString(model), owner,
+                            model: web3.utils.hexToString(model), owner, buyer,
                             price: parseInt(web3.utils.fromWei(price, "ether")),
-                            sold, image, vin: vin, year: year
+                            sold, image, vin, year, state : eState, date
                         });
                     }
                     console.log("fetchCars:getCarByIndex cars", cars);
@@ -47,12 +52,15 @@ export const fetchCar = (_vin) => (dispatch) => {
 
         console.log("fetchCar obj = ", obj);
 
-        const {model, owner, price, sold, image, vin, year} = await obj.instanceSM.methods.getCarByVin(parseInt(_vin)).call();
+        const {model, owner, buyer, price, sold, image, vin, year,state, timestamp} = await obj.instanceSM.methods.getCarByVin(parseInt(_vin)).call();
+
+        const date = new Date(timestamp * 1000); //convert to Date
+        const eState = getCarStateEnum(state);
 
         const car = {
-            model: web3.utils.hexToString(model), owner,
+            model: web3.utils.hexToString(model), owner, buyer,
             price: parseInt(web3.utils.fromWei(price, "ether")),
-            sold, image, vin: vin, year: year
+            sold, image, vin, year, state : eState, date
         }
 
         console.log("fetchCar:getCarByVin car", car);
@@ -77,13 +85,16 @@ export const showCar = (_vin) => (dispatch) => {
 
         console.log("showCar obj = ", obj);
 
-        const {model, owner, price, sold, image, vin, year} = await obj.instanceSM.methods.getCarByVin(parseInt(_vin)).call();
+        const {model, owner,buyer, price, sold, image, vin, year, state, timestamp} =
+                                    await obj.instanceSM.methods.getCarByVin(parseInt(_vin)).call();
 
+        const date = new Date(timestamp * 1000); //convert to Date
+        const eState = getCarStateEnum(state);
 
         const car = {
-            model: web3.utils.hexToString(model), owner,
+            model: web3.utils.hexToString(model), owner, buyer,
             price: parseInt(web3.utils.fromWei(price, "ether")),
-            sold, image, vin: vin, year: year
+            sold, image, vin, year, state : eState, date
         }
         console.log("showCar:getCarByVin car", car);
 
@@ -122,15 +133,80 @@ export const deleteCar = (_vin) => (dispatch) => {
             history.push(`/`);
         }).catch((err) => {
             console.log("deleteCar:err ", err.message);
-
-
-
         })
     }).catch((err) => {
-        console.log("showCar:err ", err.message);
+        console.log("deleteCar:err ", err.message);
 
     });
 }
+
+export const buyCar = (_vin, price, shopActionState) => (dispatch) => {
+    console.log("buyCar", _vin, web3.utils.toWei(price.toString(), 'ether'));
+
+    smartContractData.then(async obj => {
+
+        console.log("buyCar obj = ", obj);
+
+        obj.instanceSM.methods.buy(parseInt(_vin)).send({
+            from: obj.accounts[0],
+            gas: "6000000",
+            value: web3.utils.toWei(price.toString(), 'ether')
+        }).then((result)=>{
+            console.log("buyCar:result ", result);
+            shopActionState();//update shop status
+        }).catch((err) => {
+            console.log("buyCar:err ", err.message);
+        })
+    }).catch((err) => {
+        console.log("buyCar:err ", err.message);
+
+    });
+}
+
+export const sendDelivery = (_vin, shopActionState) => (dispatch) =>{
+    console.log("sendDelivery", _vin);
+
+    smartContractData.then(async obj => {
+
+        console.log("sendDelivery obj = ", obj);
+
+        obj.instanceSM.methods.sendDelivery(parseInt(_vin)).send({
+            from: obj.accounts[0],
+            gas: "6000000"
+        }).then((result)=>{
+            console.log("sendDelivery:result ", result);
+            shopActionState();//update shop status
+        }).catch((err) => {
+            console.log("sendDelivery:err ", err.message);
+        })
+    }).catch((err) => {
+        console.log("sendDelivery:err ", err.message);
+
+    });
+}
+
+export const  confirmDelivery = (_vin, shopActionState) =>(dispatch) =>{
+    console.log("confirmDelivery", _vin);
+
+    smartContractData.then(async obj => {
+
+        console.log("confirmDelivery obj = ", obj);
+
+        obj.instanceSM.methods.confirmDelivery(parseInt(_vin)).send({
+            from: obj.accounts[0],
+            gas: "6000000"
+        }).then((result)=>{
+            console.log("confirmDelivery:result ", result);
+            shopActionState();//update shop status
+        }).catch((err) => {
+            console.log("confirmDelivery:err ", err.message);
+        })
+    }).catch((err) => {
+        console.log("confirmDelivery:err ", err.message);
+
+    });
+}
+
 
 
 export const createCar = (vin, model, year, price, image_hash) => (dispatch) => {
@@ -145,8 +221,6 @@ export const createCar = (vin, model, year, price, image_hash) => (dispatch) => 
             gas: "6000000"
         })
             .then((result) => {
-
-
                 console.log("createCar:result ", result);
                 //jump to main page
                 history.push(`/`);
@@ -174,8 +248,6 @@ export const editCar = (vin, model, year, price, image_hash) => (dispatch) => {
             gas: "6000000"
         })
             .then((result) => {
-
-
                 console.log("editCar:result ", result);
                 //jump to main page
                 history.push(`/show/${vin}`);

@@ -9,22 +9,20 @@ class List extends React.Component {
     componentDidMount() {
         this.props.fetchUser();
         this.props.fetchCars();
-
-
-        // const d = new Date();
-        // console.log("timestamp", d.toLocaleString());
     }
 
+    onShopAction = ()=>{
+        console.log("onShopAction");
+        this.props.fetchCars();
+    }
 
     render() {
-
         return (
-
             this.props.cars.map((car) => {
-
                 return (
-
-                    <Card  car = {car} key={car.vin}> </Card>
+                    <div style={{marginTop: "10px"}} key={car.vin}>
+                        <Card car={car} userId = {this.props.userId} onShopAction={this.onShopAction}> </Card>
+                    </div>
                 );
             })
 
@@ -33,10 +31,10 @@ class List extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-
+    console.log("mapStateToProps", state);
     return {
         cars: state.cars,
-        user_id: state.userid
+        userId: state.userid
     };
 };
 

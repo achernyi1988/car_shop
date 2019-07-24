@@ -8,6 +8,7 @@ contract("CarShop test", async accounts => {
         let instance;
         let vin = 3;
         let ether = 10;
+        let image = "image";
 
         let admin  = accounts [0];
         let seller = accounts [1];
@@ -18,7 +19,7 @@ contract("CarShop test", async accounts => {
                 //got contract's instance
                 instance = ins;
 
-                instance.addCar(3, "Ford", 2013,  web3.toWei(ether, "ether"), {from: seller});
+                instance.addCar(vin, "Ford", 2013, ether,image, {from: seller});
                 return instance.getCarByVin(vin)
              })
              .then(car =>{

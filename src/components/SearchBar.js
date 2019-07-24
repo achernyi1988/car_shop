@@ -5,21 +5,6 @@ import {connect} from 'react-redux';
 
 class SearchBar extends React.Component{
 
-    // renderField = (formProps)=>{
-    //
-    //     console.log("renderField", formProps);
-    //
-    //     const className = `field ${(formProps.meta.touched && formProps.meta.error) ? "error" : "" }`;
-    //     return (
-    //         <div className={className}>
-    //             <input
-    //                 {...formProps.input}  type={formProps.type}
-    //             />
-    //
-    //         </div>
-    //     )
-    // }
-
     onSubmit = ({search})=>{
 
         console.log("onSubmit",search);

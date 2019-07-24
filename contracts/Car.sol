@@ -5,6 +5,7 @@ contract Car{
     enum State  {IDLE, BUY, SEND_DELIVERY, SOLD}
 
     address public owner;
+    address public buyer;
     uint public vin; // Vehicle Identification Number
     uint public  year;
     uint public price;
@@ -14,11 +15,9 @@ contract Car{
     bool  public sold;
     uint  public timestamp; //create or edit update
 
-
-
-
     constructor( address _owner, uint _vin, bytes32 _model, uint _year, uint _price, bool _sold, string _image_hash) public {
         owner = _owner;
+        buyer = 0x00;
         vin =   _vin;
         year =  _year;
         price = _price;
@@ -38,9 +37,11 @@ contract Car{
         timestamp = now;
     }
 
-    function buy(uint amount) isValidState(State.IDLE) public payable{
+    function buy(address _buyer, uint amount) isValidState(State.IDLE) public payable{
 
         require(amount == price , "amount is not equal to price");
+
+        buyer = _buyer;
 
         state = State.BUY;
     }

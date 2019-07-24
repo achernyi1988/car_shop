@@ -104,7 +104,7 @@ contract CarShop is Arbitrator{
 
         require(!car.sold(),"car is already sold");
 
-        car.buy(msg.value);
+        car.buy(msg.sender, msg.value);
 
         buyer[msg.sender][vin] = msg.value;
     }
@@ -145,24 +145,24 @@ contract CarShop is Arbitrator{
     }
 
     function getCarByVin( uint _vin) external view isVINAvailability(_vin)
-    returns (  address  owner, uint vin, uint year, uint price, bytes32 model,bool sold,
+    returns (  address  owner, address buyerAdd, uint vin, uint year, uint price, bytes32 model,bool sold,
         string image, Car.State state, uint timestamp ){
 
         Car car = carsArr[ getCarIndex(_vin)];
 
-        return (car.owner(), car.vin(),car.year(),car.price(),
+        return (car.owner(),car.buyer(), car.vin(),car.year(),car.price(),
         car.model(), car.sold(), car.image_hash(),
         car.state(), car.timestamp());
     }
 
     function getCarByIndex(uint index) external view
-    returns ( address  owner, uint vin, uint year, uint price, bytes32 model,bool sold,
+    returns ( address  owner, address buyerAdd, uint vin, uint year, uint price, bytes32 model,bool sold,
         string image, Car.State state, uint timestamp ){
         require(index < carsArr.length, "index is out of range");
 
         Car car = carsArr[index];
 
-        return (car.owner(), car.vin(),car.year(),car.price(),
+        return (car.owner(), car.buyer(), car.vin(),car.year(),car.price(),
         car.model(), car.sold(), car.image_hash(),
         car.state(), car.timestamp());
     }

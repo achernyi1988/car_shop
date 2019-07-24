@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {fetchCar} from "../redux/action";
+import {fetchCar,fetchUser} from "../redux/action";
 import _ from "lodash";
 import Card from "./Card"
 
@@ -8,6 +8,11 @@ class Show extends React.Component {
 
 
     componentDidMount() {
+        this.props.fetchCar(this.props.match.params.id);
+        this.props.fetchUser();
+    }
+
+    onShopAction = ()=>{
         this.props.fetchCar(this.props.match.params.id);
     }
 
@@ -23,15 +28,15 @@ class Show extends React.Component {
             return <div>Not found...</div>
         }
         return (
-            <Card car = {car} key={car.vin}> </Card>
-
+            <Card car = {car} userId = {this.props.userId} key={car.vin} onShopAction={this.onShopAction}> </Card>
         )
     }
 }
 
 const mapStateToProps = (state) => {
-    return {car: state.car};
+    return {car: state.car,
+        userId: state.userid};
 };
 
 
-export default connect(mapStateToProps, {fetchCar})(Show)
+export default connect(mapStateToProps, {fetchCar, fetchUser})(Show)
