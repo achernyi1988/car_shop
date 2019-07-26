@@ -1,5 +1,5 @@
 import Web3 from "web3";
-import HWWalletProvider from  "truffle-hdwallet-provider";
+//import HWWalletProvider from  "truffle-hdwallet-provider";
 let web3;
 
 
@@ -32,10 +32,8 @@ if( typeof window !== "undefined" &&
     web3 = new Web3(window.web3.currentProvider);
  }
 else{
-    web3 = new Web3('http://localhost:8545');
+    web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 }
-
-//web3 = new Web3('http://localhost:8545');
 
 console.log("web3 ", web3);
 

@@ -35,6 +35,13 @@ contract CarShop is Arbitrator{
 
     //---------------------functions--------------------------//
 
+    constructor( )   public {
+        //to increase testing purpose.No needed by default
+        //createCar(msg.sender, 0, "Honda", 2008, 1 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
+        //createCar(msg.sender, 1, "BMW",   2010, 2 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
+        // createCar(msg.sender, 2, "Merc",  2012, 3 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
+    }
+
     function getOwner() external view returns (address owner){
         return arbitrator;
     }
@@ -49,20 +56,14 @@ contract CarShop is Arbitrator{
 
     function createCar(address owner, uint vin, bytes32 model, uint year, uint price, string image) private{
 
-        Car car = new Car( owner,vin, model, year, price, false, image );
+        Car car = new Car( owner,vin, model, year, price, false, image, Car.State.IDLE );
         carsArr.push(car);
 
         //create a copy in order to track a full car history.Expensive
-        carLogger[vin].push(new Car( owner,vin, model, year, price, false, image ));
+        carLogger[vin].push(new Car( owner,vin, model, year, price, false, image,Car.State.IDLE ));
 
         carIndex [vin] = carsArr.length;
         carAccessibility[owner][vin] = true;
-    }
-
-    constructor( )   public {
-        //createCar(msg.sender, 0, "Honda", 2008, 1 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
-        //createCar(msg.sender, 1, "BMW",   2010, 2 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
-       // createCar(msg.sender, 2, "Merc",  2012, 3 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
     }
 
     function deleteCar(uint vin) public isOwnerVinAvailability(msg.sender, vin) {
@@ -90,7 +91,7 @@ contract CarShop is Arbitrator{
         car.edit( model, year, price * WEI, image);
 
         //create a copy in order to track a full car history.Expensive
-        carLogger[vin].push(new Car( msg.sender,vin, model, year, price * WEI, false, image ));
+        carLogger[vin].push(new Car( msg.sender,vin, model, year, price * WEI, false, image, car.state() ));
 
         emit Edit(vin, true);
     }
@@ -135,8 +136,13 @@ contract CarShop is Arbitrator{
 
         rewardAllowed += companyReward;
 
+        //----------------------------------------------
         //create a copy in order to track a full car history.Expensive
-        carLogger[vin].push(new Car( msg.sender,vin, car.model(), car.year(), car.price(), true, car.image_hash() ));
+        Car carLog = new Car( msg.sender,vin, car.model(), car.year(), car.price(),
+            true, car.image_hash(), Car.State.SEND_DELIVERY);
+        carLog.confirmDelivery(msg.sender);
+        carLogger[vin].push( carLog);
+        //----------------------------------------------
 
         emit ConfirmSelling(vin, car.price(), true);
     }
@@ -176,19 +182,19 @@ contract CarShop is Arbitrator{
     }
 
     function getHistoryLogCar(uint _vin, uint _idx) external view isCarLoggerVINAvailability(_vin)
-    returns ( address  owner, uint vin, uint year, uint price, bytes32 model,bool sold,
-        string image, Car.State state, uint timestamp ){
+    returns ( address  owner, address vendee, uint vin, uint year, uint price, bytes32 model,
+        string image, Car.State state  ){
 
-        //use storage to save gas
+        //use storage keyword to save gas
         Car  [] storage carArray  = carLogger[_vin];
 
         require(_idx < carArray.length,"out of range");
 
         Car car = carArray[_idx];
 
-        return (car.owner(), car.vin(),car.year(),car.price(),
-        car.model(), car.sold(), car.image_hash(),
-        car.state(), car.timestamp());
+        return (car.owner(),car.buyer(), car.vin(),car.year(),car.price(),
+        car.model(),  car.image_hash(),
+        car.state() );
     }
 
 

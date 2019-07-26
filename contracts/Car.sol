@@ -12,10 +12,10 @@ contract Car{
     bytes32 public model;
     string public image_hash; //IPFS
     State public state;
-    bool  public sold;
+    bool  public sold; //possible not need this variable as we have State
     uint  public timestamp; //create or edit update
 
-    constructor( address _owner, uint _vin, bytes32 _model, uint _year, uint _price, bool _sold, string _image_hash) public {
+    constructor( address _owner, uint _vin, bytes32 _model, uint _year, uint _price, bool _sold, string _image_hash, State _state) public {
         owner = _owner;
         buyer = 0x00;
         vin =   _vin;
@@ -25,7 +25,7 @@ contract Car{
         image_hash = _image_hash;
         timestamp = now;
         sold = _sold;
-        state = State.IDLE;
+        state = _state;
     }
 
 
@@ -58,7 +58,7 @@ contract Car{
 
 
     modifier isValidState(State _state){
-        require(state == _state, "not valid state");
+        require(state == _state, "invalid state");
         _;
     }
 }

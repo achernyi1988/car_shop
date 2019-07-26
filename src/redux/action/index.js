@@ -309,5 +309,7 @@ export const fetchUser = (() => (dispatch) => {
         console.log("fetchUser user", obj.accounts[0]);
         dispatch({type: USER_ACCOUNT, payload: obj.accounts.length > 0 ? obj.accounts[0] : 0});
 
+    }).catch((err) =>{
+        console.log("err" , err)
     })
 })

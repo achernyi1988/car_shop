@@ -8,8 +8,11 @@ import _ from "lodash"
 class Edit extends React.Component {
 
     required = value => value ? undefined : 'Required';
-    isFileUploaded = false;
 
+    constructor(props){
+        super(props);
+        this.state = {submitBtnStyle: "ui primary button"};
+    }
     componentDidMount() {
         this.props.fetchCar(this.props.match.params.id);
     }
@@ -30,6 +33,7 @@ class Edit extends React.Component {
     onSubmit = async (value) => {
         console.log("onSubmit", value);
 
+        this.setState({submitBtnStyle: "ui primary button loading"});
 
         if (!_.isEmpty(value.capture_image)) {
 
@@ -54,6 +58,8 @@ class Edit extends React.Component {
             this.props.editCar(value.vin, value.model, value.year,
                 value.price, value.image);
         }
+
+
     }
 
 
@@ -122,12 +128,11 @@ class Edit extends React.Component {
                             name="capture_image"
                             type="file"
                             accept='.jpg, .png, .jpeg'
-
                         />
                     </div>
-
-                    <button type="submit">Submit</button>
-
+                    <div style={{marginTop: "20px"}}>
+                        <button type="submit" className={this.state.submitBtnStyle}>Submit</button>
+                    </div>
                 </div>
             </form>
         )

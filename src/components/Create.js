@@ -1,18 +1,26 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {reduxForm, Field} from 'redux-form';
-import { createCar} from "../redux/action";
+import {createCar} from "../redux/action";
 import ipfs from "../ethereum/api/ipfs_client";
+import _ from "lodash";
 
 class Create extends React.Component {
 
     required = value => value ? undefined : 'Required';
 
+    constructor(props){
+        super(props);
+
+        this.state = {submitBtnStyle: "ui primary button"};
+    }
+
+
     componentDidMount() {
 
     }
 
-     renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
+    renderField = ({input, label, type, meta: {touched, error, warning}}) => (
         <div>
             <label>{label}</label>
             <div>
@@ -23,31 +31,34 @@ class Create extends React.Component {
     )
 
     onSubmit = async (value) => {
-        console.log("onSubmit",value );
+        console.log("onSubmit", value);
 
-        const reader = new window.FileReader();
-        reader.readAsArrayBuffer(value.image[0]);
+        if (!_.isEmpty(value.capture_image)) {
+            const reader = new window.FileReader();
+            reader.readAsArrayBuffer(value.capture_image[0]);
 
 
+            reader.onloadend = () => {
+                console.log(Buffer.from(reader.result));
 
+                this.setState({submitBtnStyle: "ui primary button loading"});
 
-        reader.onloadend = () =>{
-            console.log(Buffer.from(reader.result));
-            ipfs.files.add(Buffer.from(reader.result), (error, result)=>{
-                if(error){
-                    console.error("onSubmit", error);
-                    return;
-                }
-                console.log("hash ",result[0].hash)
+                ipfs.files.add(Buffer.from(reader.result), (error, result) => {
+                    if (error) {
+                        console.error("onSubmit", error);
+                        return;
+                    }
+                    console.log("hash ", result[0].hash)
 
-                this.props.createCar(value.vin,value.model,value.year,
-                    value.price,result[0].hash);
+                    this.props.createCar(value.vin, value.model, value.year,
+                        value.price, result[0].hash);
 
-            })
+                })
+            }
         }
     }
 
-     file_upload= ({ input,type, meta: { touched, error, warning } }) => {
+    file_upload = ({input, type, meta: {touched, error, warning}}) => {
         delete input.value
         return (
             <div>
@@ -60,7 +71,7 @@ class Create extends React.Component {
     }
 
     render() {
-        const {handleSubmit } = this.props;
+        const {handleSubmit} = this.props;
         return (
             <form onSubmit={handleSubmit(this.onSubmit)}>
                 <div className={"ui container"}>
@@ -108,15 +119,15 @@ class Create extends React.Component {
                         <Field
                             component={this.file_upload}
                             label="Shop Logo"
-                            name="image"
+                            name="capture_image"
                             type="file"
                             accept='.jpg, .png, .jpeg'
                             validate={this.required}
                         />
                     </div>
-
-                    <button type="submit">Submit</button>
-
+                    <div style={{marginTop: "20px"}}>
+                        <button type="submit" className={this.state.submitBtnStyle}>Submit</button>
+                    </div>
                 </div>
             </form>
         )
