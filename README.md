@@ -1,68 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+The best experience to use this application is to have Metamask(my case) or Mist. The idea, you can change dynamically the wallet addresses(bayer/ seller) much easier to have fun.
 
-In the project directory, you can run:
+How to:
 
-### `npm start`
+1) got to src\ethereum\private_network_config\genesis.json 
+2) geth --datadir datadir init genesis.json
+3) geth --rpc  --rpcapi "admin,debug,miner,shh,txpool,personal,eth,net,web3" --datadir datadir --networkid 15 --rpccorsdomain "*" console
+4) personal.newAccount("1")
+5) personal.unlockAccount(eth.accounts[0])   // from time to time you need to unlock account if you don't use metamask.
+5) miner.start(1)
+6) optional.   Add RPC connetion with  localhost HTTP://127.0.0.1:8545 to metaMask. Check there if you already have ether :)
+7) run a new console.
+8) truffle migrate --reset compile --all
+9) copy paste the generated CarShop address to src\ethereum\contractInstance.js      | const CONTRACT_ADDRESS = "XXXXX"
+10) optional: truffle test . Please, use Ganache which is the best one here as it has many addresses and it's fast. 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+11) npm install 
+12) npm start  //which run the browser page. Default is localhost:3000
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+First of all, I didn't spend time on design. Sorry for that :)
+The application allows you to put in trade your car and get money.
 
-### `npm test`
+Actions:
+1)View cars.
+2)Edit/Delete yours.(Only owner of the car is allowed)
+3)Search car by VIN code.
+4)withdraw money if you are company owner. Otherwise the button is not present.
+5)And of course, buy/ send car(delivery) / confirm car (delivery) .
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+If I can be of assistance, please do not hesitate to contact me.

@@ -35,13 +35,6 @@ contract CarShop is Arbitrator{
 
     //---------------------functions--------------------------//
 
-    constructor( )   public {
-        //to increase testing purpose.No needed by default
-        //createCar(msg.sender, 0, "Honda", 2008, 1 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
-        //createCar(msg.sender, 1, "BMW",   2010, 2 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
-        // createCar(msg.sender, 2, "Merc",  2012, 3 * WEI,"Qmf3AUrvvcKDroLsqwSxxCKni1TAdqNNMj7fHUuxsn1uWy");
-    }
-
     function getOwner() external view returns (address owner){
         return arbitrator;
     }

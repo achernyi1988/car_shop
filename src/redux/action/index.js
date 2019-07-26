@@ -41,7 +41,9 @@ export const fetchCars = () => (dispatch) => {
                 console.log("fetchCars:err ", err.message);
             });
         }
-    )
+    ).catch((err) => {
+        console.log("fetchCars:err ", err.message);
+    });
 }
 
 
