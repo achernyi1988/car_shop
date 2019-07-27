@@ -17,17 +17,17 @@ export const fetchCars = () => (dispatch) => {
 
                     let cars = [];
                     for (let i = 0; i < length; ++i) {
-                        const {model, owner, buyer, price, sold, image, vin, year, state, timestamp} =
+                        const {model, owner, vendee, price, sold, image, vin, year, state, timestamp} =
                                     await obj.instanceSM.methods.getCarByIndex(i).call()
 
                         const date = new Date(timestamp * 1000); //convert to Date
                         const eState = getCarStateEnum(state);
 
-                        console.log("fetchCars:getCarByIndex cars", model, owner,buyer, price, sold,
+                        console.log("fetchCars:getCarByIndex cars", model, owner,vendee, price, sold,
                             image, vin, year, getCarStateEnum(state), date);
 
                         cars.push({
-                            model: web3.utils.hexToString(model), owner, buyer,
+                            model: web3.utils.hexToString(model), owner, buyer: vendee,
                             price: parseInt(web3.utils.fromWei(price, "ether")),
                             sold, image, vin, year, state : eState, date
                         });
@@ -55,13 +55,13 @@ export const fetchCar = (_vin) => (dispatch) => {
 
         console.log("fetchCar obj = ", obj);
 
-        const {model, owner, buyer, price, sold, image, vin, year,state, timestamp} = await obj.instanceSM.methods.getCarByVin(parseInt(_vin)).call();
+        const {model, owner, vendee, price, sold, image, vin, year,state, timestamp} = await obj.instanceSM.methods.getCarByVin(parseInt(_vin)).call();
 
         const date = new Date(timestamp * 1000); //convert to Date
         const eState = getCarStateEnum(state);
 
         const car = {
-            model: web3.utils.hexToString(model), owner, buyer,
+            model: web3.utils.hexToString(model), owner, buyer: vendee,
             price: parseInt(web3.utils.fromWei(price, "ether")),
             sold, image, vin, year, state : eState, date
         }
@@ -158,14 +158,14 @@ export const showCar = (_vin) => (dispatch) => {
 
         console.log("showCar obj = ", obj);
 
-        const {model, owner,buyer, price, sold, image, vin, year, state, timestamp} =
+        const {model, owner,vendee, price, sold, image, vin, year, state, timestamp} =
                                     await obj.instanceSM.methods.getCarByVin(parseInt(_vin)).call();
 
         const date = new Date(timestamp * 1000); //convert to Date
         const eState = getCarStateEnum(state);
 
         const car = {
-            model: web3.utils.hexToString(model), owner, buyer,
+            model: web3.utils.hexToString(model), owner, buyer:vendee,
             price: parseInt(web3.utils.fromWei(price, "ether")),
             sold, image, vin, year, state : eState, date
         }

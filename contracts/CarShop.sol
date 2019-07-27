@@ -148,7 +148,7 @@ contract CarShop is Arbitrator{
     }
 
     function getCarByVin( uint _vin) external view isVINAvailability(_vin)
-    returns (  address  owner, address buyerAdd, uint vin, uint year, uint price, bytes32 model,bool sold,
+    returns (  address  owner, address vendee, uint vin, uint year, uint price, bytes32 model,bool sold,
         string image, Car.State state, uint timestamp ){
 
         Car car = carsArr[ getCarIndex(_vin)];
@@ -159,7 +159,7 @@ contract CarShop is Arbitrator{
     }
 
     function getCarByIndex(uint index) external view
-    returns ( address  owner, address buyerAdd, uint vin, uint year, uint price, bytes32 model,bool sold,
+    returns ( address  owner, address vendee, uint vin, uint year, uint price, bytes32 model,bool sold,
         string image, Car.State state, uint timestamp ){
         require(index < carsArr.length, "index is out of range");
 
