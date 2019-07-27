@@ -1,5 +1,6 @@
 import {combineReducers} from 'redux'
-import {DELETE_CAR, FETCH_CARS, GET_CAR, USER_ACCOUNT, SHOP_OWNER} from "./types"
+import {DELETE_CAR, FETCH_CARS,
+    GET_CAR, USER_ACCOUNT, SHOP_OWNER, COMPANY_BALANCE} from "./types"
 import {reducer as formReducer} from 'redux-form'
 
 const carsListReducer = (state = [], action) =>{
@@ -35,11 +36,20 @@ const shopOwnerReducer = (state = "", action) =>{
     return state;
 }
 
+const companyBalanceReducer = (state = 0, action) =>{
+    if(COMPANY_BALANCE === action.type){
+        return action.payload;
+    }
+    return state;
+}
+
+
 
 export default combineReducers({
     form: formReducer,
     cars : carsListReducer,
     userid : userAccountReducer,
     car : currentCarReducer,
-    shop_owner: shopOwnerReducer
+    shop_owner: shopOwnerReducer,
+    company_balance: companyBalanceReducer
 })

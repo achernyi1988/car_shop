@@ -89,14 +89,14 @@ contract CarShop is Arbitrator{
         emit Edit(vin, true);
     }
 
-    function addCar(uint vin, bytes32 model, uint year, uint price, string image) external {
+    function addCar(uint vin, bytes32 model, uint year, uint price, string image) external isNotVINAvailability(vin) {
 
         createCar(msg.sender, vin, model, year, price * WEI, image);
 
         emit Add (msg.sender,vin, model,  true);
     }
 
-    function buy(uint vin) external payable {
+    function buy(uint vin) external payable  {
 
         Car car = carsArr[ getCarIndex(vin)];
 
@@ -209,6 +209,11 @@ contract CarShop is Arbitrator{
 
     modifier isVINAvailability( uint vin) {
         require(0 < carIndex[vin], "no car found by vin");
+        _;
+    }
+
+    modifier isNotVINAvailability( uint vin) {
+        require(0 == carIndex[vin], "car is already present by vin");
         _;
     }
 

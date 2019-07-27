@@ -1,7 +1,7 @@
 import web3 from "./web3"
 const compiledFactory = require("./build/CarShop");
 
-const CONTRACT_ADDRESS = "0xc8e920b19957fcaa03ed5939e5904426f81b44c5";
+const CONTRACT_ADDRESS = "0x16d9e71c74864b6d7929895168f29a0fcc738407";
 
 const createInstance = async() => {
 
@@ -18,7 +18,7 @@ export const smartContractData =  createInstance().then( contractObj => {
     return contractObj;
     }
 ).catch(err => {
-    console.log("instanceSM", err.message);
+    console.log("smartContractData err", err.message);
 })
 
 

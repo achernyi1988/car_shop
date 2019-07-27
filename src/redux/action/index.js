@@ -1,4 +1,5 @@
-import {FETCH_CARS, USER_ACCOUNT, GET_CAR, DELETE_CAR, SHOP_OWNER} from "../reducer/types"
+import {FETCH_CARS, USER_ACCOUNT,
+    GET_CAR, DELETE_CAR, SHOP_OWNER, COMPANY_BALANCE} from "../reducer/types"
 import {smartContractData} from "../../ethereum/contractInstance"
 import web3 from "../../ethereum/web3"
 import history from '../../history'
@@ -113,6 +114,8 @@ export const withdrawAllReward = () => (dispatch) => {
             gas: "6000000"
         }).then(()=>{
             console.log("withdrawAllReward done");
+        }).catch((err)=>{
+            console.log("withdrawAllReward err",err );
         });
 
 
@@ -120,6 +123,32 @@ export const withdrawAllReward = () => (dispatch) => {
         console.log("withdrawAllReward:err ", err.message);
     });
 }
+
+export const getContractBalance = () => (dispatch) => {
+    console.log("getContractBalance");
+
+    smartContractData.then(async obj => {
+
+        obj.instanceSM.methods.getContractBalance().call()
+        .then((balance)=>{
+            console.log("getContractBalance done", balance);
+
+            dispatch({
+                type: COMPANY_BALANCE, payload: parseInt(balance)
+            })
+
+        }).catch((err)=>{
+            console.log("getContractBalance err",err );
+            dispatch({
+                type: COMPANY_BALANCE, payload: parseInt(0)
+            })
+        });
+
+    }).catch((err) => {
+        console.log("withdrawAllReward:err ", err.message);
+    });
+}
+
 
 
 export const showCar = (_vin) => (dispatch) => {

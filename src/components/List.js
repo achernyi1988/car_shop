@@ -1,13 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {fetchCars, fetchUser, fetchShopOwner, withdrawAllReward} from "../redux/action";
+import {fetchCars, fetchUser, fetchShopOwner,
+        withdrawAllReward, getContractBalance} from "../redux/action";
 import Card from "./Card"
 
 class List extends React.Component {
 
-
     componentDidMount() {
         this.props.fetchShopOwner();
+        this.props.getContractBalance();
         this.props.fetchUser();
         this.props.fetchCars();
     }
@@ -19,7 +20,8 @@ class List extends React.Component {
 
     renderWithdraw = () => {
 
-        if (this.props.shopOwner !== this.props.userId) {
+        if (this.props.shopOwner !== this.props.userId ||
+            (this.props.companyBalance <= 0)) {
             return null;
         }
 
@@ -55,9 +57,12 @@ const mapStateToProps = (state) => {
     return {
         cars: state.cars,
         userId: state.userid,
-        shopOwner: state.shop_owner
+        shopOwner: state.shop_owner,
+        companyBalance: state.company_balance
     };
 };
 
 
-export default connect(mapStateToProps, {fetchCars, fetchUser, fetchShopOwner, withdrawAllReward})(List)
+export default connect(mapStateToProps,
+                       {fetchCars, fetchUser,
+                       getContractBalance, fetchShopOwner, withdrawAllReward})(List)
