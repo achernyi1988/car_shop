@@ -33,4 +33,6 @@ Actions on website:
 4)withdraw money if you are company owner. Otherwise the button is not present.
 5)And of course, buy/ send car(delivery) / confirm car (delivery) .
 
+Note: you can find a website image in root of project. (website_image folder )
+
 If I can be of assistance, please do not hesitate to contact me.
