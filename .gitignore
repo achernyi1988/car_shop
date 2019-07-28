@@ -25,3 +25,5 @@ yarn-error.log*
 .idea
 
 /src/ethereum/private_network_config/datadir
+
+/src/ethereum/build

@@ -9,6 +9,11 @@ contract Arbitrator{
     constructor() public {
         arbitrator = msg.sender;
     }
+
+    function getOwner() external view returns (address owner){
+        return arbitrator;
+    }
+
     modifier onlyOwner {
         require(arbitrator == msg.sender, "arbitrator is allowed only");
         _;
