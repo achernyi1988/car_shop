@@ -34,20 +34,32 @@ const ConfirmDelivery = (props) => {
 
 const getCarState = (props) => {
 
-    const display_owner = props.car.owner !== props.userId ? "none" : "" ;
+    const display_owner = props.car.owner !== props.userId ? "none" : "";
 
     let display_buyer = "";
-    if(props.car.buyer){
-        display_buyer = props.car.buyer !== props.userId ? "none" : "" ;
+    if (props.car.buyer) {
+        display_buyer = props.car.buyer !== props.userId ? "none" : "";
     }
 
     switch (props.car.state) {
         case CarState.IDLE:
             return {text: "Buy", bg: "white", button_name: "ui green  button", func: Buy};
         case CarState.BUY:
-            return {text: "Send delivery", bg: "olive", button_name: "ui yellow  button", display: display_owner, func: SendDelivery};
+            return {
+                text: "Send delivery",
+                bg: "olive",
+                button_name: "ui yellow  button",
+                display: display_owner,
+                func: SendDelivery
+            };
         case CarState.SEND_DELIVERY:
-            return {text: "Confirm delivery", bg: "yellow", button_name: "ui red  button",  display: display_buyer, func: ConfirmDelivery};
+            return {
+                text: "Confirm delivery",
+                bg: "yellow",
+                button_name: "ui red  button",
+                display: display_buyer,
+                func: ConfirmDelivery
+            };
         case CarState.SOLD:
             return {bg: "green", display: "none"};
         default:
@@ -79,40 +91,36 @@ const Card = (props) => {
     const carConfig = getCarState(props);
 
     return (
-        <div className="ui container">
-            <div className="row">
-                <div className="row-md-6">
 
-                    <div style={{backgroundColor: carConfig.bg}} className="ui card" key={props.car.vin}>
-                        <div className="image">
-                            <Link to={`/show/${props.car.vin}`}>
 
-                                <img style={{objectFit: "cover", width: "100%", height: "155px"}}
-                                     src={`https://ipfs.io/ipfs/${props.car.image}`} alt=""/>
-                            </Link>
-                        </div>
-                        <div className="content">
-                            <Link to={`/show/${props.car.vin}`}>
-                                <div className="header">    {props.car.model}</div>
-                                <div className="meta">
-                                    <span className="date">Last update {props.car.date.toLocaleString()}</span>
-                                    <div>{props.car.price} ether</div>
-                                    <div>VIN: {props.car.vin} </div>
-                                    <div>Release year: {props.car.year} </div>
-                                </div>
-                            </Link>
-                            {renderButtonActions(props, carConfig)}
-                            <button type="button" style={{marginLeft: "50px", display: carConfig.display}}
-                                    className={carConfig.button_name}
-                                    onClick={() => carConfig.func(props)}>
-                                {carConfig.text}
-                            </button>
-                        </div>
+                <div style={{backgroundColor: carConfig.bg}} className="ui card" key={props.car.vin}>
+                    <div className="image">
+                        <Link to={`/show/${props.car.vin}`}>
+
+                            <img style={{objectFit: "cover", width: "100%", height: "155px"}}
+                                 src={`https://ipfs.io/ipfs/${props.car.image}`} alt=""/>
+                        </Link>
                     </div>
-
+                    <div className="content">
+                        <Link to={`/show/${props.car.vin}`}>
+                            <div className="header">    {props.car.model}</div>
+                            <div className="meta">
+                                <span className="date">Last update {props.car.date.toLocaleString()}</span>
+                                <div>{props.car.price} ether</div>
+                                <div>VIN: {props.car.vin} </div>
+                                <div>Release year: {props.car.year} </div>
+                            </div>
+                        </Link>
+                        {renderButtonActions(props, carConfig)}
+                        <button type="button" style={{marginLeft: "50px", display: carConfig.display}}
+                                className={carConfig.button_name}
+                                onClick={() => carConfig.func(props)}>
+                            {carConfig.text}
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </div>
+
+
     );
 }
 

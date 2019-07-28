@@ -39,6 +39,10 @@ contract CarShop is Arbitrator{
         return address(this).balance;
     }
 
+    function getRewardBalance() external view returns (uint balance){
+        return rewardAllowed;
+    }
+
     function getNumberOfCars() external view returns(uint index){
         return carsArr.length;
     }

@@ -1,20 +1,23 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {fetchCars, fetchUser, fetchShopOwner,
-        withdrawAllReward, getContractBalance} from "../redux/action";
+import {
+    fetchCars, fetchUser, fetchShopOwner,
+    withdrawAllReward, getRewardBalance
+} from "../redux/action";
 import Card from "./Card"
 
 class List extends React.Component {
 
     componentDidMount() {
         this.props.fetchShopOwner();
-        this.props.getContractBalance();
+        this.props.getRewardBalance();
         this.props.fetchUser();
         this.props.fetchCars();
     }
 
     onShopAction = () => {
         console.log("onShopAction");
+        this.props.getRewardBalance();
         this.props.fetchCars();
     }
 
@@ -36,18 +39,20 @@ class List extends React.Component {
 
     render() {
         return (
-            <div>
-                {this.props.cars.map((car) => {
-                    return (
-                        <div style={{marginTop: "10px"}} key={car.vin}>
-                            <Card car={car} userId={this.props.userId} onShopAction={this.onShopAction}> </Card>
+            <div className="ui container">
 
-                        </div>
-                    );
-                })}
-                {this.renderWithdraw()}
+                <div className="ui link cards">
+                    {this.props.cars.map((car) => {
+                        return (
+                            <div style={{marginTop: "30px", marginLeft: "70px"}} key={car.vin}>
+                                <Card car={car} userId={this.props.userId} onShopAction={this.onShopAction}> </Card>
+
+                            </div>
+                        );
+                    })}
+                    {this.renderWithdraw()}
+                </div>
             </div>
-
         )
     }
 }
@@ -64,5 +69,7 @@ const mapStateToProps = (state) => {
 
 
 export default connect(mapStateToProps,
-                       {fetchCars, fetchUser,
-                       getContractBalance, fetchShopOwner, withdrawAllReward})(List)
+    {
+        fetchCars, fetchUser,
+        getRewardBalance, fetchShopOwner, withdrawAllReward
+    })(List)

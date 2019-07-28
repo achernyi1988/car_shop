@@ -114,6 +114,9 @@ export const withdrawAllReward = () => (dispatch) => {
             gas: "6000000"
         }).then(()=>{
             console.log("withdrawAllReward done");
+            dispatch({
+                type: COMPANY_BALANCE, payload: parseInt(0)
+            })
         }).catch((err)=>{
             console.log("withdrawAllReward err",err );
         });
@@ -124,21 +127,21 @@ export const withdrawAllReward = () => (dispatch) => {
     });
 }
 
-export const getContractBalance = () => (dispatch) => {
-    console.log("getContractBalance");
+export const getRewardBalance = () => (dispatch) => {
+    console.log("getRewardBalance");
 
     smartContractData.then(async obj => {
 
-        obj.instanceSM.methods.getContractBalance().call()
+        obj.instanceSM.methods.getRewardBalance().call()
         .then((balance)=>{
-            console.log("getContractBalance done", balance);
+            console.log("getRewardBalance done", balance);
 
             dispatch({
                 type: COMPANY_BALANCE, payload: parseInt(balance)
             })
 
         }).catch((err)=>{
-            console.log("getContractBalance err",err );
+            console.log("getRewardBalance err",err );
             dispatch({
                 type: COMPANY_BALANCE, payload: parseInt(0)
             })

@@ -1,7 +1,7 @@
 import web3 from "./web3"
 const compiledFactory = require("./build/CarShop");
 
-const CONTRACT_ADDRESS = "0x046807337ca2c0af25d46628cc30835f3c7bd458";
+const CONTRACT_ADDRESS = "0xeea264d5bba827db59e2aec47189bda78ba48e91";
 
 const createInstance = async() => {
 

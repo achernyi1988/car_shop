@@ -28,7 +28,9 @@ class Show extends React.Component {
             return <div>Not found...</div>
         }
         return (
-            <Card car = {car} userId = {this.props.userId} key={car.vin} onShopAction={this.onShopAction}> </Card>
+            <div className="ui container">
+                <Card car = {car} userId = {this.props.userId} key={car.vin} onShopAction={this.onShopAction}> </Card>
+            </div>
         )
     }
 }
