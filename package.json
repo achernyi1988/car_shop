@@ -9,7 +9,7 @@
     "hoist-non-react-statics": "^3.3.0",
     "ipfs-api": "^26.1.2",
     "keymirror": "^0.1.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "material-ui": "^0.20.2",
     "react": "^16.8.6",
     "react-admin": "^2.7.3",
